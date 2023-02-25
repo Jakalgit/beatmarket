@@ -1,0 +1,308 @@
+.land {
+  height: 16rem;
+  border-radius: 1.2rem;
+  padding: 1.8rem 2.2rem;
+  box-shadow: 0 0 0.8rem 0.2rem rgba(48, 79, 254, 0.25);
+  background-color: #000000;
+  transition: all 0.2s;
+}
+.land:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.3rem 0.4rem rgba(48, 79, 254, 0.25);
+}
+.land_margin {
+  margin-top: 8rem;
+}
+.head_text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+}
+.text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  color: #82B1FF;
+  margin-top: 0.3rem;
+}
+.logo_line {
+  margin-top: 2.2rem;
+}
+.logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  margin-right: 3.1rem;
+  background-color: #82B1FF;
+  display: inline-block;
+}
+.top_track {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview {
+  width: 16rem;
+  height: 16rem;
+  border-right: 0.8rem;
+  margin-right: 2.5rem;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.preview:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1rem 0.6rem rgba(48, 79, 254, 0.25);
+}
+.author {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+.name_play {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.track_name {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.8rem;
+  margin-bottom: 0;
+}
+.play {
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: #ffffff;
+  transition: all 0.2s;
+}
+.play:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.star {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.stars {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.count {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left: 1.6rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+.top {
+  margin-left: auto;
+  margin-top: 0;
+  text-decoration: underline;
+}
+.flex {
+  display: flex;
+}
+.left_col_margin {
+  margin-right: 10.3rem;
+}
+.minute_block {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 35rem;
+}
+.shadow_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blue_shadow {
+  width: 32rem;
+  height: 10rem;
+  border-radius: 23rem/6rem;
+  background: rgba(48, 79, 254, 0.8);
+  filter: blur(4.5rem);
+  position: absolute;
+  z-index: 0;
+}
+.minute {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 2.6rem;
+  color: #fff;
+  z-index: 1;
+  transition: all 0.2s;
+}
+.minute:hover {
+  transform: scale(1.2);
+  cursor: default;
+}
+.margin_last_text {
+  margin-top: 8.7rem;
+}
+@media (max-width: 1399px) {
+  .land_margin {
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 1199px) {
+  .head_text {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .text {
+    font-size: 1.1rem;
+  }
+  .land {
+    height: 14rem;
+    padding: 1.4rem 1.8rem;
+  }
+  .land_margin {
+    margin-top: 5rem;
+  }
+  .logo {
+    height: 4.4rem;
+    width: 4.4rem;
+    margin-right: 2.9rem;
+  }
+  .logo_line {
+    margin-top: 1.8rem;
+  }
+  .preview {
+    width: 14rem;
+    height: 14rem;
+    margin-right: 2rem;
+  }
+  .track_name {
+    font-size: 1.6rem;
+    margin-right: 0.6rem;
+  }
+  .play {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .author {
+    margin-top: 2rem;
+  }
+  .stars {
+    margin-top: 2rem;
+  }
+  .count {
+    margin-left: 1.2rem;
+  }
+  .left_col_margin {
+    margin-right: 5.8rem;
+  }
+  .minute_block {
+    min-height: 25rem;
+  }
+  .blue_shadow {
+    width: 26rem;
+    height: 6rem;
+    filter: blur(3.5rem);
+  }
+  .margin_last_text {
+    margin-top: 5.5rem;
+  }
+  .minute {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 991px) {
+  .head_text {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+  .land {
+    height: 12rem;
+    border-radius: 1rem;
+    padding: 1.2rem 1.4rem;
+  }
+  .land_margin {
+    margin-top: 2.8rem;
+  }
+  .logo {
+    height: 3.6rem;
+    width: 3.6rem;
+    margin-right: 2rem;
+  }
+  .preview {
+    width: 12rem;
+    height: 12rem;
+    margin-right: 1rem;
+  }
+  .track_name {
+    font-size: 1.4rem;
+    margin-right: 0.4rem;
+  }
+  .play {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .author {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .stars {
+    margin-top: 1.5rem;
+  }
+  .star {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.3rem;
+  }
+  .count {
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .left_col_margin {
+    margin-right: 3rem;
+  }
+  .blue_shadow {
+    width: 23rem;
+    height: 5rem;
+    filter: blur(3.2rem);
+  }
+  .margin_last_text {
+    margin-top: 5rem;
+  }
+  .minute {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .head_text {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .text {
+    font-size: 0.7rem;
+  }
+  .land {
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 1.2rem 1.4rem;
+  }
+  .logo {
+    height: 2.8rem;
+    width: 2.8rem;
+    margin-right: 1.2rem;
+  }
+  .logo_line {
+    margin-top: 1rem;
+  }
+}

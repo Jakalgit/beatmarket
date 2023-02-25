@@ -1,0 +1,118 @@
+.navbar {
+    width: 100%;
+    height: 4.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.href {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: #82B1FF;
+    margin-left: 9.9rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.href:hover {
+    opacity: 0.9;
+}
+.logo {
+    font-size: 1.6rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    color: #82B1FF;
+    margin-right: 6rem;
+    margin-left: 0;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+    margin-left: auto;
+}
+.svg:hover {
+    cursor: pointer;
+    fill: rgba(130, 177, 255, 0.8);
+}
+.help {
+    width: 100%;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+}
+.btn {
+    margin-left: auto;
+}
+.right_ico {
+    margin-left: 4rem;
+}
+.find_svg {
+    fill: rgba(130, 177, 255, 0.5);
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.2s;
+}
+.find_svg:hover {
+    cursor: pointer;
+    fill: #82B1FF;
+}
+.find_line {
+    display: inline-block;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    font-size: 1.3rem;
+    background-color: #000000;
+    outline: none;
+    border-style: none;
+    color: #82B1FF;
+    width: 30rem;
+}
+.find_line::placeholder {
+    color: rgba(130, 177, 255, 0.5);
+}
+@media (max-width: 1399px) {
+    .href {
+        margin-left: 7rem;
+    }
+}
+@media (max-width: 1199px) {
+    .href {
+        margin-left: 6rem;
+        font-size: 1.1rem;
+    }
+    .logo {
+        font-size: 1.4rem;
+        margin-right: 3rem;
+    }
+    .svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .right_ico {
+        margin-left: 3rem;
+    }
+    .find_svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .find_line {
+        font-size: 1.2rem;
+        width: 24rem;
+    }
+}
+@media (max-width: 991px) {
+    .href {
+        margin-left: 3rem;
+    }
+    .logo {
+        margin-right: 2rem;
+    }
+}
