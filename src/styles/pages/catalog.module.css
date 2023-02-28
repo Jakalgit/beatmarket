@@ -1,0 +1,93 @@
+.filter_line {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.filter_button {
+    width: 15rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #304FFE;
+    font-size: 1.4rem;
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    background-color: black;
+    transition: all 0.2s;
+}
+.filter_button:hover {
+    box-shadow: 0 0 0.8rem 0.8rem rgba(48, 79, 254, 0.25);
+}
+.list {
+    margin-bottom: 6rem;
+}
+.track {
+    margin-top: 6rem;
+}
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.preview {
+    width: 16.3rem;
+    height: 16.3rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.image {
+    position: absolute;
+}
+.image:hover {
+    cursor: pointer;
+}
+.play_block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    z-index: 2;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #304FFE;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(48, 79, 254, 0.25);
+    transition: all 0.2s;
+    position: absolute;
+}
+.play_block:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.play {
+    fill: white;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.author {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #82B1FF;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.author:hover {
+    color: #ACC9FFFF;
+}
+.price {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 2.5rem;
+}

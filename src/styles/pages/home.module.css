@@ -359,4 +359,13 @@
   .left_col_margin {
     margin-right: 0;
   }
+  .top_track {
+    margin-top: 2.5rem;
+  }
+  .last_land {
+    margin-top: 2.5rem;
+  }
+  .land {
+    box-shadow: 0 0 0.6rem 0.1rem rgba(48, 79, 254, 0.25);
+  }
 }

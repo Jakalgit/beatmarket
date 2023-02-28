@@ -22,7 +22,7 @@ export default function Home() {
                   </motion.div>
               </Col>
               <Col xxl={7} xl={7} lg={7} md={7} sm={{span: 7, offset: 0}}
-                   xs={{span: 10, offset: 1}} className={style.top_track}>
+                   xs={{span: 10, offset: 1}} style={{display: "inline-flex", justifyContent: 'center'}}>
                   <motion.div className={style.top_track} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                               viewport={{ once: false }}>
                       <Image src={require("@/img/preview.png")} className={style.preview} />
@@ -46,23 +46,25 @@ export default function Home() {
                       </div>
                   </motion.div>
               </Col>
-              <div className={style.flex + ' ' + style.land_margin}>
-                  <Col xxl={6} xl={6} lg={6} md={6} sm={{span: 6, offset: 0}} xs={{span: 10, offset: 1}} className={style.left_col_margin}>
-                      <motion.div className={style.land}
-                                  initial={{ opacity: 0 }}
-                                  whileInView={{ opacity: 1 }}
+              <Col xxl={12} xl={12} lg={12} md={12} sm={{span: 12, offset: 0}} xs={{span: 10, offset: 1}}>
+                  <div className={style.flex + ' ' + style.land_margin}>
+                      <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12} className={style.left_col_margin}>
+                          <motion.div className={style.land}
+                                      initial={{ opacity: 0 }}
+                                      whileInView={{ opacity: 1 }}
+                                      viewport={{ once: false }}>
+                              <h1 className={style.head_text}>Как продавать свои биты?</h1>
+                              <h2 className={style.text}>Рассказываем и показывем как выйти на нашу площадку, вам понадобится
+                                  лишь номер телефона и электронная почта. </h2>
+                          </motion.div>
+                      </Col>
+                      <motion.div className={style.land + ' ' + style.last_land} style={{flex: '1 auto'}} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                                   viewport={{ once: false }}>
-                          <h1 className={style.head_text}>Как продавать свои биты?</h1>
-                          <h2 className={style.text}>Рассказываем и показывем как выйти на нашу площадку, вам понадобится
-                              лишь номер телефона и электронная почта. </h2>
+                          <h1 className={style.head_text}>Набирающие популяность</h1>
+                          <h2 className={style.text}>Работы которые не попали в топы, но всё равно достойны внимания.</h2>
                       </motion.div>
-                  </Col>
-                  <motion.div className={style.land} style={{flex: '1 auto'}} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-                              viewport={{ once: false }}>
-                      <h1 className={style.head_text}>Набирающие популяность</h1>
-                      <h2 className={style.text}>Работы которые не попали в топы, но всё равно достойны внимания.</h2>
-                  </motion.div>
-              </div>
+                  </div>
+              </Col>
           </Grid>
           <div className={style.minute_block}>
               <div className={style.shadow_block}>

@@ -7,7 +7,7 @@
     left: 0;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
     backdrop-filter: blur(0.8rem);
 }
 .href {
@@ -19,7 +19,7 @@
     text-decoration: none;
 }
 .href:hover {
-    opacity: 0.9;
+    color: #ACC9FFFF;
 }
 .logo {
     font-size: 1.6rem;
@@ -43,7 +43,7 @@
 }
 .svg:hover {
     cursor: pointer;
-    fill: rgba(130, 177, 255, 0.8);
+    fill: #ACC9FFFF;
 }
 .menu {
     display: none;
@@ -141,6 +141,7 @@
     }
     .href {
         display: none;
+        font-size: 1.5rem;
     }
     .menu {
         display: block;
@@ -165,5 +166,22 @@
     .find_svg {
         width: 1.5rem;
         height: 1.5rem;
+    }
+}
+@media (max-width: 575px) {
+    .svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .find_svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .find_line {
+        font-size: 1.2rem;
+        width: 24rem;
+    }
+    .logo {
+        font-size: 1.3rem;
     }
 }

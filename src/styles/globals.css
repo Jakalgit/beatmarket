@@ -17,6 +17,12 @@ body {
   border-bottom-left-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
+@media (max-width: 1199px) {
+  ::-webkit-scrollbar {
+    background-color: black;
+    width: 0.4rem;
+  }
+}
 @media (max-width: 767px) {
   .height {
     min-height: calc(100vh - 6rem);
