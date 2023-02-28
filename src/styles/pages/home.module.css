@@ -45,7 +45,7 @@
 .preview {
   width: 16rem;
   height: 16rem;
-  border-right: 0.8rem;
+  border-radius: 0.8rem;
   margin-right: 2.5rem;
   display: inline-block;
   transition: all 0.2s;
@@ -304,5 +304,51 @@
   }
   .logo_line {
     margin-top: 1rem;
+  }
+  .preview {
+    width: 9rem;
+    height: 9rem;
+    margin-right: 0.7rem;
+    border-radius: 0.4rem;
+  }
+  .track_name {
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+  }
+  .play {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .author {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+  .stars {
+    margin-top: 1rem;
+  }
+  .star {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.1rem;
+  }
+  .count {
+    margin-left: 0.9rem;
+    font-size: 0.9rem;
+  }
+  .land_margin {
+    margin-top: 2.5rem;
+  }.blue_shadow {
+     width: 18rem;
+     height: 4rem;
+     filter: blur(2.5rem);
+   }
+  .margin_last_text {
+    margin-top: 3.5rem;
+  }
+  .minute {
+    font-size: 1.5rem;
+  }
+  .minute_block {
+    min-height: 18rem;
   }
 }

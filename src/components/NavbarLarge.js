@@ -1,4 +1,4 @@
-import style from "@/styles/components/navbar.module.css"
+import style from "@/styles/components/navbar-large.module.css"
 import {Col, Container, Row} from "react-bootstrap";
 import { motion } from "framer-motion";
 import Link from "next/link";
