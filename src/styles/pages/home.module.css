@@ -352,3 +352,11 @@
     min-height: 18rem;
   }
 }
+@media (max-width: 575px) {
+  .flex {
+    display: block;
+  }
+  .left_col_margin {
+    margin-right: 0;
+  }
+}

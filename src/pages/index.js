@@ -1,5 +1,5 @@
 import style from "@/styles/pages/home.module.css"
-import {Col, Container, Row} from "react-bootstrap";
+import {Col} from "react-bootstrap";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
       <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
           <Grid>
-              <Col xxl={5} xl={5} lg={5} md={5} sm={5}>
+              <Col xxl={5} xl={5} lg={5} md={5} sm={{span: 5, offset: 0}} xs={{span: 10, offset: 1}}>
                   <motion.div className={style.land} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
                       <h1 className={style.head_text}>Популярные бит - мейкеры</h1>
                       <h2 className={style.text}>Создано на основании продаж за последний месяц.</h2>
@@ -21,7 +21,8 @@ export default function Home() {
                       </div>
                   </motion.div>
               </Col>
-              <Col xxl={7} xl={7} lg={7} md={7} sm={7} className={style.top_track}>
+              <Col xxl={7} xl={7} lg={7} md={7} sm={{span: 7, offset: 0}}
+                   xs={{span: 10, offset: 1}} className={style.top_track}>
                   <motion.div className={style.top_track} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                               viewport={{ once: false }}>
                       <Image src={require("@/img/preview.png")} className={style.preview} />
@@ -46,7 +47,7 @@ export default function Home() {
                   </motion.div>
               </Col>
               <div className={style.flex + ' ' + style.land_margin}>
-                  <Col xxl={6} xl={6} lg={6} md={6} sm={6} className={style.left_col_margin}>
+                  <Col xxl={6} xl={6} lg={6} md={6} sm={{span: 6, offset: 0}} xs={{span: 10, offset: 1}} className={style.left_col_margin}>
                       <motion.div className={style.land}
                                   initial={{ opacity: 0 }}
                                   whileInView={{ opacity: 1 }}
