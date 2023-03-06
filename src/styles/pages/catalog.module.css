@@ -1,5 +1,4 @@
 .filter_line {
-    margin-top: 4.5rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
@@ -128,6 +127,61 @@
         margin-top: 2rem;
     }
 }
+@media (max-width: 991px) {
+    .filter_button {
+        width: 11.5rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    .filter_line {
+        margin-bottom: 0;
+    }
+    .preview {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 0.5rem;
+    }
+    .play_block {
+        bottom: 0.4rem;
+        right: 0.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        box-shadow: 0 0 0.2rem 0.2rem rgba(48, 79, 254, 0.25);
+    }
+    .play {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .name {
+        font-size: 1rem;
+    }
+    .author {
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
+    }
+    .price {
+        font-size: 1rem;
+        margin-top: 1.6rem;
+    }
+}
 @media (max-width: 767px) {
-
+    .preview {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 0.4rem;
+    }
+    .name {
+        font-size: 0.8rem;
+    }
+    .author {
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+    }
+    .price {
+        font-size: 0.8rem;
+        margin-top: 1.3rem;
+    }
+    .track {
+        margin-top: 5rem;
+    }
 }

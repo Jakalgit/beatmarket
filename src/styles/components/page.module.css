@@ -25,3 +25,12 @@
     margin-bottom: 0;
     margin-top: 0;
 }
+@media (max-width: 991px) {
+    .item {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    .number {
+        font-size: 1.1rem;
+    }
+}

@@ -16,7 +16,7 @@ const Catalog = () => {
             <div className={style.list}>
                 <Grid>
                     {arr.map(() =>
-                        <Col xxl={3} xl={3} lg={4} md={4} sm={4} className={style.track}>
+                        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={12} className={style.track}>
                             <motion.div className={style.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
                                 <div className={style.preview}>
                                     <div className={style.play_block}>
