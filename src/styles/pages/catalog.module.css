@@ -19,7 +19,7 @@
     box-shadow: 0 0 0.8rem 0.8rem rgba(48, 79, 254, 0.25);
 }
 .list {
-    margin-bottom: 6rem;
+
 }
 .track {
     margin-top: 6rem;
@@ -90,4 +90,44 @@
     font-size: 1.4rem;
     color: white;
     margin-top: 2.5rem;
+}
+@media (max-width: 1199px) {
+    .filter_button {
+        width: 13rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+    .filter_line {
+        margin-bottom: 1rem;
+    }
+    .preview {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 0.7rem;
+    }
+    .play_block {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        box-shadow: 0 0 0.4rem 0.4rem rgba(48, 79, 254, 0.25);
+    }
+    .play {
+        width: 2rem;
+        height: 2rem;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+    .author {
+        font-size: 0.9rem;
+        margin-top: 0.7rem;
+    }
+    .price {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 767px) {
+
 }

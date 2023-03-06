@@ -4,6 +4,7 @@ import {Col} from "react-bootstrap";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Pagination from "@/components/Pagination";
 
 const Catalog = () => {
     const arr = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
@@ -15,7 +16,7 @@ const Catalog = () => {
             <div className={style.list}>
                 <Grid>
                     {arr.map(() =>
-                        <Col xxl={3} className={style.track}>
+                        <Col xxl={3} xl={3} lg={4} md={4} sm={4} className={style.track}>
                             <motion.div className={style.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
                                 <div className={style.preview}>
                                     <div className={style.play_block}>
@@ -31,6 +32,9 @@ const Catalog = () => {
                     )}
                 </Grid>
             </div>
+            <Grid>
+                <Pagination />
+            </Grid>
         </div>
     );
 };
