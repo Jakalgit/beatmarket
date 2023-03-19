@@ -165,10 +165,16 @@
     }
 }
 @media (max-width: 767px) {
+    .filter_button:hover {
+        box-shadow: none;
+    }
     .preview {
         width: 10rem;
         height: 10rem;
         border-radius: 0.4rem;
+    }
+    .play_block:hover {
+        transform: scale(1.0);
     }
     .name {
         font-size: 0.8rem;
@@ -183,5 +189,41 @@
     }
     .track {
         margin-top: 5rem;
+    }
+}
+@media (max-width: 575px) {
+    .filter_button {
+        width: 11rem;
+        height: 2.8rem;
+        font-size: 0.9rem;
+    }
+    .preview {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 0.8rem;
+    }
+    .play_block {
+        bottom: 0.6rem;
+        right: 0.6rem;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    .play {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+    .author {
+        font-size: 0.9rem;
+        margin-top: 0.8rem;
+    }
+    .price {
+        font-size: 1.2rem;
+        margin-top: 1.8rem;
+    }
+    .track {
+        margin-top: 6rem;
     }
 }

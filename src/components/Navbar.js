@@ -3,6 +3,7 @@ import {Container} from "react-bootstrap";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {useState} from "react";
+import {CATALOG} from "@/utils/routes";
 
 const Navbar = ({setMenuLeft}) => {
 
@@ -45,7 +46,7 @@ const Navbar = ({setMenuLeft}) => {
                             <svg onClick={openMenu} className={style.svg + ' ' + style.menu} xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M150 822.696q-14.424 0-24.245-9.871-9.82-9.871-9.82-24.37 0-14.498 9.82-24.194 9.821-9.696 24.245-9.696h660q14.424 0 24.245 9.871 9.82 9.871 9.82 24.37 0 14.498-9.82 24.194-9.821 9.696-24.245 9.696H150Zm0-212.631q-14.424 0-24.245-9.871-9.82-9.871-9.82-24.369 0-14.499 9.82-24.195 9.821-9.695 24.245-9.695h660q14.424 0 24.245 9.871 9.82 9.871 9.82 24.369 0 14.499-9.82 24.195-9.821 9.695-24.245 9.695H150Zm0-212.63q-14.424 0-24.245-9.871-9.82-9.871-9.82-24.37 0-14.498 9.82-24.314 9.821-9.815 24.245-9.815h660q14.424 0 24.245 9.991 9.82 9.99 9.82 24.489 0 14.498-9.82 24.194-9.821 9.696-24.245 9.696H150Z"/></svg>
                             <Link href={"/"} className={style.href + ' ' + style.logo}>BeatMarket</Link>
                             <Link href={"/"} className={style.href}>Популярное</Link>
-                            <Link href={"/"} className={style.href}>Каталог</Link>
+                            <Link href={CATALOG} className={style.href}>Каталог</Link>
                             <Link href={"/"} className={style.href}>Сообщения</Link>
                             <Link href={"/"} className={style.href}>Поддержка</Link>
                             <Link href={"/"} className={style.href}>Стать создателем</Link>

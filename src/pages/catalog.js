@@ -5,13 +5,28 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
+import {useState} from "react";
+import Filters from "@/components/Filters";
 
 const Catalog = () => {
+
+    const [visible, setVisible] = useState(false);
+    const [filters, setFilters] = useState(null);
+
+    const updateVisible = (value) => {
+        setVisible(value);
+    }
+
+    const updateFilters = (value) => {
+        setFilters(value)
+    }
+
     const arr = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
     return (
         <div className="height">
+            <Filters visible={visible} setVisible={(value) => updateVisible(value)} save={filters} setSaveFilters={(value) => updateFilters(value)}/>
             <div className={style.filter_line}>
-                <button className={style.filter_button}>Фильтры</button>
+                <button onClick={() => setVisible(true)} className={style.filter_button}>Фильтры</button>
             </div>
             <div className={style.list}>
                 <Grid>
