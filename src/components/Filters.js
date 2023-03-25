@@ -3,6 +3,7 @@ import {CSSTransition} from "react-transition-group";
 import { motion } from "framer-motion";
 import {useEffect, useState} from "react";
 
+// анимация появления списка
 const itemVariants = {
     open: {
         opacity: 1,
@@ -12,6 +13,7 @@ const itemVariants = {
     closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
 };
 
+// Прототип фильтра, bpm и type могут быть пустыми
 const _fl = {
     type: "beats",
     bpm: "",
@@ -22,6 +24,7 @@ const _fl = {
     time: "",
 }
 
+// доступные сортировки битов
 const sortBeatTypes = [
     {name: "Новизне", type: "news"},
     {name: "Популярности", type: "popular"},
@@ -29,6 +32,7 @@ const sortBeatTypes = [
     {name: "Цене (по возрастанию)", type: "price_asc"},
 ]
 
+// доступные сортировкм создателей
 const sortCreatorTypes = [
     {name: "Новизне", type: "news"},
     {name: "Популярности", type: "popular"},
@@ -41,11 +45,31 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
 
     const [tempFilters, setTempFilters] = useState(_fl)
     const [filters, setFilters] = useState(_fl)
+    const [sortList, setSortList] = useState([])
 
-    if (save) {
-        setTempFilters(save)
-        setFilters(save)
-    }
+    const [saveClick, setSaveClick] = useState(false)
+    const [doneDisplay, setDoneDisplay] = useState(0)
+
+    useEffect(() => {
+        if (save) {
+            setTempFilters(save)
+            setFilters(save)
+        }
+    }, [save])
+
+    useEffect(() => {
+        if (tempFilters.type === "beats") {
+            setSortList(sortBeatTypes)
+        } else {
+            setSortList(sortCreatorTypes)
+        }
+        setTempFilters({...tempFilters, sort: {
+                name: "Популярности",
+                type: "popular",
+            }
+        })
+        setIsOpen(false)
+    }, [tempFilters.type])
 
     useEffect(() => {
         setIsOpen(false)
@@ -53,15 +77,25 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
 
     const resetFilters = () => {
         setTempFilters(_fl)
+        setFilters(_fl)
+        setDoneDisplay(0)
     }
 
     const saveTempFilters = () => {
         setFilters(tempFilters)
+        if (!saveClick) {
+            setSaveClick(true)
+            setDoneDisplay(1)
+            setTimeout(() => {
+                setSaveClick(false)
+                setDoneDisplay(0)
+            }, 2500)
+        }
     }
 
     const closePopup = () => {
         setVisible(false);
-        //setSaveFilters(filters);
+        setSaveFilters(filters);
     }
 
     const setTypeObject = (value) => {
@@ -85,15 +119,27 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
     }
 
     const setTypeSort = (type, name) => {
-        switch (type) {
-            case "popular":
-            case "news":
-            case "price_asc":
-            case "price_desc":
-                setTempFilters({...tempFilters, sort: {type, name}})
-                break
-            default:
-                setTempFilters({...tempFilters, sort: {type: "popular", name: "Популярности"}})
+        if (tempFilters.type === "beats") {
+            switch (type) {
+                case "popular":
+                case "news":
+                case "price_asc":
+                case "price_desc":
+                    setTempFilters({...tempFilters, sort: {type, name}})
+                    break
+                default:
+                    setTempFilters({...tempFilters, sort: {type: "popular", name: "Популярности"}})
+            }
+        } else if (tempFilters.type === "creators") {
+            switch (type) {
+                case "popular":
+                case "news":
+                case "sales":
+                    setTempFilters({...tempFilters, sort: {type, name}})
+                    break
+                default:
+                    setTempFilters({...tempFilters, sort: {type: "popular", name: "Популярности"}})
+            }
         }
     }
 
@@ -200,7 +246,7 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
                                     }}
                                     style={{ pointerEvents: isOpen ? "auto" : "none" }}
                                 >
-                                    {sortBeatTypes.map(type =>
+                                    {sortList.map(type =>
                                         <div>
                                             {type.type !== tempFilters.sort.type &&
                                                 <motion.li
@@ -229,6 +275,7 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
                         <p className={style.text + ' ' + style.seconds}>с.</p>
                     </div>
                     <div className={style.last_line}>
+                        <svg className={style.done} style={{opacity: doneDisplay}} xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M378 798q-6 0-11-2t-10-7L176 608q-9-9-9-22t9-22q9-9 21-9t21 9l160 160 363-363q9-9 21.5-9t21.5 9q9 9 9 21.5t-9 21.5L399 789q-5 5-10 7t-11 2Z"/></svg>
                         <motion.button
                             whileTap={{ scale: 0.97 }}
                             className={style.down_btn + ' ' + style.clean}

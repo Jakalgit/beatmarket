@@ -162,6 +162,7 @@
 .last_line {
     margin-top: auto;
     display: flex;
+    align-items: center;
 }
 .down_btn {
     width: 18rem;
@@ -171,6 +172,14 @@
     font-family: 'Manrope', sans-serif;
     font-size: 1.4rem;
 }
+.done {
+    fill: #00E676;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    transition: all 0.3s;
+}
 .save {
     background-color: #304FFE;
     margin-left: 1.7rem;
@@ -178,6 +187,5 @@
 }
 .clean {
     border: 0.1rem solid #304FFE;
-    margin-left: auto;
     background-color: black;
 }
