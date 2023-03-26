@@ -1,0 +1,386 @@
+.info_block {
+    display: flex;
+    align-items: center;
+}
+.preview {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9rem;
+    margin-right: 3.1rem;
+    background-color: #82B1FF;
+}
+.line {
+    display: flex;
+    flex: 1 0 auto;
+}
+.left {
+    min-width: 21rem;
+}
+.name_above {
+    display: flex;
+    align-items: center;
+}
+.name_above_text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0;
+}
+.rating {
+    margin-left: auto;
+    display: flex;
+}
+.star {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: 0.4rem;
+    margin-top: 0.2rem;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+.name_under {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+.start_time {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0;
+}
+.text_button {
+    margin-left: auto;
+    color: #82B1FF;
+    transition: all 0.2s;
+}
+.text_button:hover {
+    cursor: pointer;
+    color: white;
+}
+.reactions {
+    display: flex;
+    margin-top: 2.6rem;
+}
+.react_star {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.3rem;
+}
+.react_count {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+.send_mail {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+.send_mail:hover {
+    cursor: pointer;
+}
+.send_mail:hover .send_text{
+    color: white;
+}
+.send_mail:hover .svg_mail{
+    fill: #ffffff;
+}
+.send_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+    transition: all 0.2s;
+}
+.svg_mail {
+    width: 2.1rem;
+    height: 2.1rem;
+    fill: #82B1FF;
+    margin-right: 0.5rem;
+    transition: all 0.2s;
+}
+.sub {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 3.6rem;
+    width: 18rem;
+    height: 4rem;
+}
+.sub_button {
+    width: 100%;
+    border: 0.1rem solid #304FFE;
+    border-radius: 0.8rem;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    background-color: black;
+    transition: all 0.3s;
+}
+.subscribe {
+    background-color: #304FFE;
+}
+.spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    border-top-color: #82B1FF;
+    animation: spinner 800ms linear infinite;
+    transition: all 0.3s;
+    margin-top: 0.9rem;
+}
+.beat_list {
+    margin-top: 2.5vh;
+}
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 1199px) {
+    .preview {
+        width: 14rem;
+        height: 14rem;
+    }
+    .left {
+        min-width: 18rem;
+    }
+    .name_above_text {
+        font-size: 1.2rem;
+    }
+    .star {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .name {
+        font-size: 2.6rem;
+    }
+    .start_time {
+        font-size: 1.2rem;
+    }
+    .reactions {
+        margin-top: 1.8rem;
+    }
+    .react_star {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .react_count {
+        font-size: 1.2rem;
+    }
+    .send_text {
+        font-size: 1.2rem;
+    }
+    .svg_mail {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .sub {
+        width: 16rem;
+        height: 3.4rem;
+        margin-top: 2.8rem;
+    }
+    .sub_button {
+        border-radius: 0.6rem;
+        font-size: 1.2rem;
+    }
+    .spinner {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .preview {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 2rem;
+    }
+    .left {
+        min-width: 15rem;
+    }
+    .name_above_text {
+        font-size: 1rem;
+    }
+    .star {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.2rem;
+    }
+    .name {
+        font-size: 2.2rem;
+    }
+    .name_under {
+        margin-top: 0.2rem;
+    }
+    .start_time {
+        font-size: 1rem;
+    }
+    .reactions {
+        margin-top: 1.2rem;
+    }
+    .react_star {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.2rem;
+    }
+    .react_count {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+    }
+    .send_text {
+        font-size: 1rem;
+    }
+    .svg_mail {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .sub {
+        width: 14rem;
+        height: 2.8rem;
+        margin-top: 1.8rem;
+    }
+    .sub_button {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .preview {
+        width: 8rem;
+        height: 8rem;
+        margin-right: 1.5rem;
+    }
+    .left {
+        min-width: 12.5rem;
+    }
+    .name_above_text {
+        font-size: 0.8rem;
+    }
+    .star {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-top: 0.2rem;
+    }
+    .name {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    .start_time {
+        font-size: 0.8rem;
+    }
+    .reactions {
+        margin-top: 0.8rem;
+    }
+    .react_star {
+        width: 1rem;
+        height: 1rem;
+    }
+    .react_count {
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+    .send_text {
+        font-size: 0.8rem;
+    }
+    .svg_mail {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .sub {
+        width: 12rem;
+        height: 2.4rem;
+        margin-top: 1.2rem;
+    }
+    .sub_button {
+        font-size: 0.8rem;
+        border-radius: 0.4rem;
+    }
+    .spinner {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+@media (max-width: 575px) {
+    .info_block {
+        flex-direction: column;
+    }
+    .preview {
+        margin-right: 0;
+        width: 13rem;
+        height: 13rem;
+        margin-bottom: 2rem;
+    }
+    .line {
+        flex-direction: column;
+    }
+    .left {
+        min-width: 17.5rem;
+    }
+    .name_above_text {
+        font-size: 1.2rem;
+    }
+    .star {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 0.3rem;
+    }
+    .name {
+        font-size: 2.4rem;
+    }
+    .start_time {
+        font-size: 1.2rem;
+    }
+    .reactions {
+        margin-top: 1.2rem;
+    }
+    .react_star {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .react_count {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    .right {
+        margin-top: 3rem;
+        margin-left: 0;
+        align-items: center;
+    }
+    .send_text {
+        font-size: 1.2rem;
+    }
+    .svg_mail {
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-right: 0.5rem;
+    }
+    .sub {
+        width: 16rem;
+        height: 3.4rem;
+    }
+    .sub_button {
+        font-size: 1.2rem;
+        border-radius: 0.8rem;
+    }
+    .spinner {
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0.8rem;
+    }
+}

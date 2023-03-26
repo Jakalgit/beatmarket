@@ -133,10 +133,10 @@
 }
 @media (max-width: 767px) {
     .navbar {
-        height: 3rem;
+        height: 5rem;
     }
     .help {
-        height: 3rem;
+        height: 5rem;
         margin-bottom: 3rem;
     }
     .href {
@@ -153,29 +153,33 @@
         font-size: 1.1rem;
     }
     .svg {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2rem;
+        height: 2rem;
     }
     .right_ico {
         margin-left: 2rem;
     }
     .find_line {
-        font-size: 1rem;
+        font-size: 1.2rem;
         width: 20rem;
     }
     .find_svg {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2rem;
+        height: 2rem;
     }
 }
 @media (max-width: 575px) {
+    .navbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
     .svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
     }
     .find_svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
     }
     .find_line {
         font-size: 1.2rem;

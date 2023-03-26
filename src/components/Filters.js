@@ -170,21 +170,23 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
                         </svg>
                     </div>
                     <div className={style.first_line}>
-                        <motion.button
-                            whileTap={{ scale: 0.97 }}
-                            className={style.current_type + ' ' + (tempFilters.type === "beats" ? style.checked : '')}
-                            onClick={() => setTypeObject("beats")}
-                        >
-                            Биты
-                        </motion.button>
-                        <div className={style.separator}/>
-                        <motion.button
-                            whileTap={{ scale: 0.97 }}
-                            className={style.current_type + ' ' + (tempFilters.type === "creators" ? style.checked : '')}
-                            onClick={() => setTypeObject("creators")}
-                        >
-                            Создатели
-                        </motion.button>
+                        <div style={{display: "inline-block"}}>
+                            <motion.button
+                                whileTap={{ scale: 0.97 }}
+                                className={style.current_type + ' ' + (tempFilters.type === "beats" ? style.checked : '')}
+                                onClick={() => setTypeObject("beats")}
+                            >
+                                Биты
+                            </motion.button>
+                            <div className={style.separator}/>
+                            <motion.button
+                                whileTap={{ scale: 0.97 }}
+                                className={style.current_type + ' ' + (tempFilters.type === "creators" ? style.checked : '')}
+                                onClick={() => setTypeObject("creators")}
+                            >
+                                Создатели
+                            </motion.button>
+                        </div>
                         <div className={style.bpm} style={{opacity: (tempFilters.type === "beats" ? 1 : 0)}}>
                             <div className={style.input_wrapper}>
                                 <input
