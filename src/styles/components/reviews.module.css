@@ -1,0 +1,109 @@
+.window {
+    width: 73rem;
+    height: 43rem;
+    background-color: black;
+    border: 0.1rem solid #304FFE;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 1rem 0.7rem rgba(48, 79, 254, 0.25);
+    display: flex;
+}
+.left {
+    border-right: 0.1rem solid #304FFE;
+    width: 65%;
+}
+.right {
+    width: 35%;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+}
+.line {
+    display: flex;
+    align-items: center;
+}
+.rating {
+    align-items: center;
+}
+.score {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 2.7rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+.stars {
+    display: flex;
+    flex-direction: column;
+}
+.star {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.4rem;
+}
+.score_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: white;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+.creator_name {
+    margin-left: auto;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8rem;
+}
+.review_border {
+    border-bottom: 0.1rem solid rgba(130, 177, 255, 0.5);
+}
+.review {
+    padding-bottom: 1rem;
+    margin-top: 1.7rem;
+}
+.review_info {
+    display: flex;
+    align-items: center;
+}
+.user_photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #82B1FF;
+    margin-right: 1.9rem;
+}
+.name_date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0.4rem;
+}
+.date {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+}
+.review_stars {
+    margin-left: auto;
+    display: flex;
+}
+.review_star {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.4rem;
+}

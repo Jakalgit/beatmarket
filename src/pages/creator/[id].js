@@ -6,10 +6,12 @@ import { motion } from "framer-motion";
 import {useState} from "react";
 import Beat from "@/components/Beat";
 import Pagination from "@/components/Pagination";
+import Reviews from "@/components/Reviews";
 
 const CreatorPage = () => {
 
     const [subLoading, setSubLoading] = useState(false)
+    const [reviewVisible, setReviewVisible] = useState(false)
 
     const subscribe = () => {
         setSubLoading(true)
@@ -18,8 +20,13 @@ const CreatorPage = () => {
         }, 2000)
     }
 
+    const updateReviewVisible = (value) => {
+        setReviewVisible(value)
+    }
+
     return (
         <div  className="height" style={{display: 'flex', flexDirection: 'column'}}>
+            <Reviews visible={reviewVisible} setVisible={(value) => updateReviewVisible(value)} />
             <Grid>
                 <motion.div
                     className={style.info_block}
@@ -40,7 +47,8 @@ const CreatorPage = () => {
                             <h1 className={style.name}>VisaGangBeatz</h1>
                             <div className={style.name_under}>
                                 <p className={style.start_time}>с нами уже 576 дней</p>
-                                <p className={style.start_time + ' ' + style.text_button}>Отзывы</p>
+                                <p onClick={() => setReviewVisible(true)}
+                                   className={style.start_time + ' ' + style.text_button}>Отзывы</p>
                             </div>
                             <div className={style.reactions}>
                                 <div>
