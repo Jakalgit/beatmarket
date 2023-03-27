@@ -25,7 +25,7 @@ const CreatorPage = () => {
     }
 
     return (
-        <div  className="height" style={{display: 'flex', flexDirection: 'column'}}>
+        <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
             <Reviews visible={reviewVisible} setVisible={(value) => updateReviewVisible(value)} />
             <Grid>
                 <motion.div
