@@ -6,11 +6,14 @@
     border-radius: 1.8rem;
     box-shadow: 0 0 1rem 0.7rem rgba(48, 79, 254, 0.25);
     display: flex;
-    transform: scale(1.05);
+    transform: scale(1.12);
 }
 .left {
-    border-right: 0.1rem solid #304FFE;
     width: 65%;
+}
+.border {
+    border-right: 0.1rem solid #304FFE;
+    width: 0.1rem;
 }
 .right {
     width: 35%;
@@ -65,14 +68,14 @@
     margin-top: 1.8rem;
     padding-right: 0.8rem;
     overflow-y: auto;
+    transition: all 0.2s;
 }
-.list::-webkit-scrollbar {
+.scl::-webkit-scrollbar {
     background-color: rgba(255, 255, 255, 0.5);
     width: 0.3rem;
     border-radius: 0.2rem;
 }
-
-.list::-webkit-scrollbar-thumb {
+.scl::-webkit-scrollbar-thumb {
     background-color: #82B1FF;
     border-radius: 0.2rem;
 }
@@ -132,6 +135,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 5.7rem;
+    transition: all 0.2s;
 }
 .rate_line {
     margin-bottom: 1.4rem;
@@ -155,4 +159,278 @@
     color: white;
     border-radius: 0.8rem;
     border: none;
+    transition: all 0.2s;
+}
+.left_write {
+    margin-top: 4.3rem;
+    transition: all 0.2s;
+}
+.write_text_line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.write_text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+}
+.back_view {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+}
+.back_view:hover {
+    cursor: pointer;
+    fill: white;
+    transform: scale(1.1);
+}
+.textarea {
+    padding: 1.3rem 1.2rem;
+    background-color: rgba(130, 177, 255, 0.1);
+    height: 25.5rem;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 1.2rem;
+    color: #82B1FF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+}
+.textarea::placeholder {
+    color: rgba(130, 177, 255, 0.5);
+}
+.set_stars {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.set_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+.set_star {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    transition: all 0.2s;
+}
+.cl_small {
+    display: none;
+}
+.set_star:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+@media (max-width: 1399px) {
+    .window {
+        transform: scale(1.07);
+    }
+}
+@media (max-width: 1199px) {
+    .window {
+        transform: scale(0.96);
+    }
+}
+@media (max-width: 991px) {
+    .window {
+        transform: scale(0.9);
+    }
+}
+@media (max-width: 767px) {
+    .window {
+        transform: scale(1);
+        width: 57rem;
+        height: 33.5rem;
+        border-radius: 1.2rem;
+        box-shadow: 0 0 0.6rem 0.5rem rgba(48, 79, 254, 0.25);
+    }
+    .block {
+        padding: 1.2rem;
+    }
+    .score {
+        font-size: 2.2rem;
+        margin-right: 0.7rem;
+    }
+    .star {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.3rem;
+    }
+    .score_text {
+        font-size: 0.8rem;
+        margin-top: 0.1rem;
+    }
+    .creator_name {
+        font-size: 1.7rem;
+    }
+    .list {
+        margin-top: 1.2rem;
+    }
+    .review {
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .user_photo {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+    }
+    .name {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+    .date {
+        font-size: 0.8rem;
+    }
+    .review_star {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-right: 0.2rem;
+    }
+    .comment {
+        font-size: 0.8rem;
+        margin-top: 0.9rem;
+    }
+    .rate_list {
+        margin-top: 4rem;
+    }
+    .rate_line {
+        margin-bottom: 1rem;
+    }
+    .count_rate {
+        font-size: 1.1rem;
+        margin-left: 1rem;
+    }
+    .button {
+        width: 17rem;
+        height: 3rem;
+        border-radius: 0.6rem;
+        font-size: 1.1rem;
+    }
+    .left_write {
+        margin-top: 2.5rem;
+    }
+    .write_text_line {
+        margin-bottom: 0.7rem;
+    }
+    .write_text {
+        font-size: 1.1rem;
+    }
+    .back_view {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 1.5rem;
+    }
+    .textarea {
+        padding: 0.9rem 0.9rem;
+        height: 21rem;
+        border-radius: 0.8rem;
+        font-size: 1rem;
+    }
+    .set_text {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+    }
+    .set_star {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+}
+@media (max-width: 575px) {
+    .window {
+        height: 48rem;
+        width: 32rem;
+        flex-direction: column;
+    }
+    .cl_large {
+        display: none;
+    }
+    .cl_small {
+        display: inline-block;
+    }
+    .left {
+        width: 100%;
+        height: 32rem;
+    }
+    .right {
+        width: 100%;
+        flex: 1 0 auto;
+        align-items: center;
+    }
+    .block {
+        padding: 0.7rem 1rem;
+    }
+    .score {
+        font-size: 1.9rem;
+        margin-right: 0.5rem;
+    }
+    .star {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-right: 0.2rem;
+    }
+    .score_text {
+        font-size: 0.7rem;
+        margin-top: 0;
+    }
+    .creator_name {
+        font-size: 1.4rem;
+        margin-top: 0.25rem;
+        margin-right: 0.3rem;
+    }
+    .review {
+        padding-bottom: 0.7rem;
+        margin-top: 0.7rem;
+    }
+    .user_photo {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 0.6rem;
+    }
+    .name {
+        font-size: 0.9rem;
+    }
+    .date {
+        font-size: 0.7rem;
+    }
+    .review_star {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .border {
+        border-bottom: 0.1rem solid #304FFE;
+        width: 100%;
+        height: 0.1rem;
+    }
+    .rate_list {
+        flex: 1 0 auto;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .rate_line {
+        margin-bottom: 0.3rem;
+    }
+    .count_rate {
+        font-size: 0.9rem;
+        margin-left: 0.6rem;
+    }
+    .button {
+        width: 30rem;
+    }
+    .textarea {
+        height: 22rem;
+    }
 }
