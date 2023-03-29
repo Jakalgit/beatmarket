@@ -157,11 +157,11 @@ const Filters = ({visible, setVisible, save, setSaveFilters}) => {
         <CSSTransition
             in={visible}
             timeout={580}
-            classNames="filters-back"
+            classNames="popup-back"
             mountOnEnter
             unmountOnExit
         >
-            <div className={style.back + ' filters-back'}>
+            <div className={style.back + ' popup-back'}>
                 <div className={style.window}>
                     <div className={style.up_line}>
                         <h1 className={style.head}>Фильтры</h1>

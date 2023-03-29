@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import {useState} from "react";
 import Beat from "@/components/Beat";
 import Pagination from "@/components/Pagination";
-import Reviews from "@/components/Reviews";
+import Reviews from "@/components/Popups/Reviews";
 
 const CreatorPage = () => {
 

@@ -11,7 +11,9 @@ body {
   background-color: black;
   width: 0.8rem;
 }
-
+p {
+  margin-bottom: 0;
+}
 ::-webkit-scrollbar-thumb {
   background-color: #82B1FF;
   border-bottom-left-radius: 0.5rem;

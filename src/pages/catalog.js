@@ -2,7 +2,7 @@ import style from "@/styles/pages/catalog.module.css"
 import Grid from "@/components/Grid";
 import Pagination from "@/components/Pagination";
 import {useEffect, useState} from "react";
-import Filters from "@/components/Filters";
+import Filters from "@/components/Popups/Filters";
 import Beat from "@/components/Beat";
 import Creator from "@/components/Creator";
 

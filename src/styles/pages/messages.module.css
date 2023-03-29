@@ -100,16 +100,34 @@
     color: white;
     margin-bottom: 0;
 }
+.delete {
+    fill: rgba(229, 57, 53, 0.5);
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 2.5rem;
+    transition: all 0.2s;
+}
+.delete:hover {
+    fill: rgba(229, 57, 53, 1);
+    cursor: pointer;
+}
 .user_id {
     font-family: 'Manrope', sans-serif;
     font-size: 1.4rem;
     color: rgba(130, 177, 255, 0.6);
     margin-left: auto;
     margin-bottom: 0;
+    transition: all 0.2s;
+}
+.user_id:hover {
+    color: rgba(130, 177, 255, 1);
+    cursor: pointer;
 }
 .view_area {
     flex: 1 0 auto;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -117,9 +135,83 @@
     display: flex;
     flex-direction: column;
 }
-.under_line {
+.day {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: #82B1FF;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.line_message {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
     display: flex;
 }
-.input_area {
+.left_message {
+    justify-content: flex-start;
+}
+.right_message {
+    justify-content: flex-end;
+}
+.message {
+    padding: 0.7rem 1rem;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.6rem;
+}
+.message_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+.message_under_line {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.message_time {
 
+}
+.under_line {
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.2s;
+    border-top: 0.1rem solid rgba(130, 177, 255, 0.5);
+}
+.content {
+    flex: 1 0 auto;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.content::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 0.3rem;
+    border-radius: 0.2rem;
+}
+.content::-webkit-scrollbar-thumb {
+    background-color: #82B1FF;
+    border-radius: 0.2rem;
+}
+.content::placeholder {
+    color: rgba(130, 177, 255, 0.5);
+}
+.svg {
+    margin-left: 2rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+}
+.svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }

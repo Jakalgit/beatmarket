@@ -102,11 +102,11 @@ const Reviews = ({visible, setVisible}) => {
         <CSSTransition
             in={visible}
             timeout={580}
-            classNames="filters-back"
+            classNames="popup-back"
             mountOnEnter
             unmountOnExit
         >
-            <div className={style_back.back + ' filters-back'}>
+            <div className={style_back.back + ' popup-back'}>
                 <div className={style.window}>
                     <div className={style.left + ' ' + style.block}>
                         <div className={style.line}>
