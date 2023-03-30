@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {useState} from "react";
-import {CATALOG} from "@/utils/routes";
+import {CATALOG, MESSAGES} from "@/utils/routes";
 
 const Navbar = ({setMenuLeft}) => {
 
@@ -47,7 +47,7 @@ const Navbar = ({setMenuLeft}) => {
                             <Link href={"/"} className={style.href + ' ' + style.logo}>BeatMarket</Link>
                             <Link href={"/"} className={style.href}>Популярное</Link>
                             <Link href={CATALOG} className={style.href}>Каталог</Link>
-                            <Link href={"/"} className={style.href}>Сообщения</Link>
+                            <Link href={MESSAGES} className={style.href}>Сообщения</Link>
                             <Link href={"/"} className={style.href}>Поддержка</Link>
                             <Link href={"/"} className={style.href}>Стать создателем</Link>
                             <div className={style.btn}>

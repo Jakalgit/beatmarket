@@ -1,3 +1,43 @@
 .window {
-
+    width: 54rem;
+    height: 21rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1rem 0.7rem rgba(48, 79, 254, 0.25);
+    background-color: black;
+    border: 0.1rem solid #304FFE;
+    border-radius: 1.4rem;
+    padding: 1.2rem;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    display: inline-block;
+}
+.up {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+}
+.under {
+    display: flex;
+    align-items: center;
+}
+.delete {
+    color: #E53935;
+    margin-right: 2.1rem;
+}
+.save {
+    color: #82B1FF;
+    margin-right: 2.1rem;
+}
+.action:hover {
+    cursor: pointer;
 }

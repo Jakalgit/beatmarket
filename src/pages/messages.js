@@ -3,23 +3,44 @@ import {Col} from "react-bootstrap";
 import style from "@/styles/pages/messages.module.css"
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
+import Attention from "@/components/Popups/Attention";
 
 const Messages = () => {
 
     const [maxHeight, setMaxHeight] = useState(140)
     const [message, setMessage] = useState('')
+
     const textareaRef = useRef(null)
     const underLineRef = useRef(null)
+    const scrollableRef = useRef(null)
+    let scrollFirst = true
+
+    const [currentChat, setCurrentChat] = useState(null)
+
     const [showSend, setShowSend] = useState(false)
 
-    useEffect(() => {
-        const width = window.innerWidth
-        if (width > 991 && width <= 1299) {
-            setMaxHeight(100)
-        } else if (width > 767 && width <= 991) {
+    const [attention, setAttention] = useState(false)
+    const [delChatId, setDelChatId] = useState(-1)
 
+    if (typeof(window) !== "undefined") {
+        useEffect(() => {
+            const width = window.innerWidth
+            if (width > 991 && width <= 1299) {
+                setMaxHeight(100)
+            } else if (width > 767 && width <= 991) {
+
+            }
+        }, [window])
+    }
+
+    useEffect(() => {
+        if (scrollFirst) {
+            scrollableRef.current.scrollTop = scrollableRef.current.scrollHeight
+            scrollFirst = false
+        } else if (scrollableRef.current.scrollTop + scrollableRef.current.clientHeight === scrollableRef.current.scrollHeight) {
+            scrollableRef.current.scrollTop = scrollableRef.current.scrollHeight
         }
-    }, [window.innerWidth])
+    }, [scrollableRef])
 
     useEffect(() => {
         textareaRef.current.style.height = "0px";
@@ -38,11 +59,20 @@ const Messages = () => {
         }
     }, [message])
 
+    const updateAttention = (value) => {
+        setAttention(value)
+    }
+
+    const updateDeleteChat = (value) => {
+        setDelChatId(value)
+    }
+
     return (
         <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
+            <Attention visible={attention} setVisible={(value) => updateAttention(value)} setDelChat={(value) => updateDeleteChat(value)} />
             <Grid>
                 <Col xxl={4}>
-                    <div className={style.chats}>
+                    <div className={style.chats + ' ' + style.scl}>
                         {[1,1,1,1,1,1,1,1,1,1,1,1,1].map(() =>
                             <div className={style.chat}>
                                 <Image src="" alt="prof-img" className={style.chat_preview}/>
@@ -62,22 +92,31 @@ const Messages = () => {
                     <div className={style.area}>
                         <div className={style.head_line}>
                             <h1 className={style.name}>CAKE BUY BEATS</h1>
-                            <svg className={style.delete} xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+                            <svg onClick={() => setAttention(true)} className={style.delete} xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
                                 <path d="M261 936q-24 0-42-18t-18-42V306h-11q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T190 246h158q0-13 8.625-21.5T378 216h204q12.75 0 21.375 8.625T612 246h158q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T770 306h-11v570q0 24-18 42t-42 18H261Zm0-630v570h438V306H261Zm106 454q0 12.75 8.675 21.375 8.676 8.625 21.5 8.625 12.825 0 21.325-8.625T427 760V421q0-12.75-8.675-21.375-8.676-8.625-21.5-8.625-12.825 0-21.325 8.625T367 421v339Zm166 0q0 12.75 8.675 21.375 8.676 8.625 21.5 8.625 12.825 0 21.325-8.625T593 760V421q0-12.75-8.675-21.375-8.676-8.625-21.5-8.625-12.825 0-21.325 8.625T533 421v339ZM261 306v570-570Z"/>
                             </svg>
                             <p className={style.user_id}>@cakebuybeats</p>
                         </div>
-                        <div className={style.view_area}>
+                        <div className={style.view_area + ' ' + style.scl} ref={scrollableRef}>
                             <div className={style.ribbon}>
                                 <p className={style.day}>14 февраля</p>
-                                <div className={style.left_message + ' ' + style.line_message}>
-                                    <div className={style.message}>
-                                        <p className={style.message_text}>Здравствуйте, все цены на странице бита</p>
-                                        <div className={style.message_under_line}>
-
+                                {[1,2,1,2,1,2,1,2,1,2].map(i =>
+                                    <div className={(i === 1 ? style.left_message : style.right_message) + ' ' + style.line_message}>
+                                        <div className={style.message}>
+                                            <p className={style.message_text}>Здравствуйте, сколько стоит вот этот бит?</p>
+                                            <div className={style.message_under_line}>
+                                                <div>
+                                                    <svg className={style.viewed_svg + ' ' + style.viewed_left} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.74994 6.73744L2.01244 4.99994L1.42078 5.58744L3.74994 7.9166L8.74994 2.9166L8.16244 2.3291L3.74994 6.73744Z"/>
+                                                    </svg>
+                                                    <svg className={style.viewed_svg} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.74994 6.73744L2.01244 4.99994L1.42078 5.58744L3.74994 7.9166L8.74994 2.9166L8.16244 2.3291L3.74994 6.73744Z"/>
+                                                    </svg>
+                                                </div>
+                                                <p className={style.message_time}>21:38</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div>)}
                             </div>
                         </div>
                         <div ref={underLineRef} className={style.under_line}>

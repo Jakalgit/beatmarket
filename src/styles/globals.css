@@ -14,6 +14,9 @@ body {
 p {
   margin-bottom: 0;
 }
+h1 {
+  margin-bottom: 0;
+}
 ::-webkit-scrollbar-thumb {
   background-color: #82B1FF;
   border-bottom-left-radius: 0.5rem;

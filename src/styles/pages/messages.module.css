@@ -5,12 +5,12 @@
     overflow-y: auto;
     max-height: 80vh;
 }
-.chats::-webkit-scrollbar {
+.scl::-webkit-scrollbar {
     background-color: rgba(255, 255, 255, 0.5);
     width: 0.4rem;
     border-radius: 0.2rem;
 }
-.chats::-webkit-scrollbar-thumb {
+.scl::-webkit-scrollbar-thumb {
     background-color: #82B1FF;
     border-radius: 0.2rem;
 }
@@ -92,6 +92,7 @@
 .head_line {
     display: flex;
     align-items: center;
+    padding-bottom: 2rem;
 }
 .name {
     font-family: 'Manrope', sans-serif;
@@ -124,16 +125,18 @@
     cursor: pointer;
 }
 .view_area {
-    flex: 1 0 auto;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 1rem;
+}
+.ribbon {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.ribbon {
-    display: flex;
-    flex-direction: column;
+    min-height: 100%;
 }
 .day {
     font-family: 'Manrope', sans-serif;
@@ -161,6 +164,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 0.6rem;
+    max-width: 60%;
 }
 .message_text {
     font-family: 'Manrope', sans-serif;
@@ -173,14 +177,27 @@
     justify-content: flex-end;
     align-items: center;
 }
+.viewed_svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #82B1FF;
+    margin-right: 0.6rem;
+}
+.viewed_left {
+    margin-right: -0.5rem;
+}
 .message_time {
-
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    color: #82B1FF;
 }
 .under_line {
     display: flex;
     align-items: flex-end;
     transition: all 0.2s;
     border-top: 0.1rem solid rgba(130, 177, 255, 0.5);
+    margin-top: 2rem;
+    padding-top: 1rem;
 }
 .content {
     flex: 1 0 auto;

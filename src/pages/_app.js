@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
 import {useState} from "react";
+import Notification from "@/components/Notifications/Notification";
 
 export default function App({ Component, pageProps }) {
 
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <Menu menuLeft={menuLeft} setMenuLeft={(value) => changeMenuLeft(value)}/>
+            <Notification />
             <Navbar setMenuLeft={(value) => changeMenuLeft(value)} />
             <Component {...pageProps} />
             <Footer />
