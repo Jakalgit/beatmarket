@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {motion} from "framer-motion";
-import style from "@/styles/components/notification.module.css";
+import style from "@/styles/components/notifications.module.css";
 import {useSelector} from "react-redux";
 import {useActions} from "@/hooks/useActions";
 
@@ -9,25 +9,29 @@ const Notifications = () => {
     const notifications = useSelector(state => state.notifications._notifications)
 
     return (
-        <>
+        <div className={style.list}>
             {notifications.map(el =>
                 <Notification notification={el} />
             )}
-        </>
+        </div>
     );
 };
 
 const Notification = ({notification}) => {
 
     const [x, setX] = useState("0")
+    const [height, setHeight] = useState(100)
 
     const {deleteNotification} = useActions()
 
     const closeNotification = () => {
-        setX("-110%")
+        //setX("-110%")
+        setHeight(0)
+        /*
         setTimeout(() => {
             deleteNotification(notification)
         }, 550)
+         */
     }
 
     const closeNotificationTimeOut = () => {
@@ -35,18 +39,25 @@ const Notification = ({notification}) => {
     }
 
     useEffect(() => {
+        /*
         setTimeout(() => {
             closeNotification()
         }, 5000)
+         */
     }, [])
 
     return (
         <motion.div
-            initial={{x: "-110%"}}
-            animate={{x}}
+            //initial={{x: "-110%", opacity: 0}}
+            style={{height}}
+            animate={{
+                x,
+                opacity: 1,
+            }}
             transition={{
                 type: "spring",
-                layout: { duration: 0.5 }
+                layout: { duration: 0.5 },
+                bounce: 0,
             }}
             className={style.notification + ' ' + (notification.type === 1 ? style.error : '')}
         >

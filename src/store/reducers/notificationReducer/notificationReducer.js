@@ -13,8 +13,7 @@ export const notificationReducer = (state = initialState, action) => {
         case SET_NOTIFICATION_LIST:
             return {...state, _notifications: action.payload}
         case ADD_NOTIFICATION:
-            state._notifications.unshift(action.payload)
-            return state
+            return {...state, _notifications: [...state._notifications, action.payload]}
         case DELETE_NOTIFICATION:
             return {...state, _notifications: state._notifications.filter(el => el.id !== action.payload.id)}
         default:
