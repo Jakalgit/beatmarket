@@ -14,3 +14,13 @@ export const reformatCount = (starCount) => {
     }
     return price
 }
+
+export const add_notification = (head, text, type, addNotification) => {
+    const id = Date.now()
+    addNotification({
+        id,
+        head,
+        text,
+        type,
+    })
+}

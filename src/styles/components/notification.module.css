@@ -1,15 +1,18 @@
 .notification {
-    position: fixed;
-    top: 5rem;
-    left: 1rem;
     width: 32rem;
-    height: 10rem;
+    min-height: 10rem;
     border-radius: 1rem;
-    background-color: rgba(130, 177, 255, 0.2);
+    background-color: #1a2333;
     display: flex;
     flex-direction: column;
-    z-index: 12;
     padding: 1rem;
+    position: fixed;
+    top: 5rem;
+    left: 2rem;
+    z-index: 3;
+}
+.error {
+    background-color: #E53935;
 }
 .up_line {
     display: flex;
@@ -31,4 +34,13 @@
 .close:hover {
     cursor: pointer;
     transform: rotate(90deg);
+}
+.white {
+    fill: #ffffff;
+}
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 1rem;
 }

@@ -8,7 +8,7 @@ import Beat from "@/components/Beat";
 import Pagination from "@/components/Pagination";
 import Reviews from "@/components/Popups/Reviews";
 
-const CreatorPage = () => {
+export default function CreatorPage() {
 
     const [subLoading, setSubLoading] = useState(false)
     const [reviewVisible, setReviewVisible] = useState(false)
@@ -99,5 +99,3 @@ const CreatorPage = () => {
         </div>
     );
 };
-
-export default CreatorPage;

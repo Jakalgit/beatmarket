@@ -4,9 +4,11 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
 import {useState} from "react";
-import Notification from "@/components/Notifications/Notification";
+import Notifications from "@/components/Notifications";
+import {wrapper} from "@/store";
+import AppWrapper from "@/components/AppWrapper";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
 
     const [menuLeft, setMenuLeft] = useState('-100%')
 
@@ -17,10 +19,12 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <Menu menuLeft={menuLeft} setMenuLeft={(value) => changeMenuLeft(value)}/>
-            <Notification />
+            <Notifications />
             <Navbar setMenuLeft={(value) => changeMenuLeft(value)} />
-            <Component {...pageProps} />
+            <AppWrapper Component={Component} pageProps={pageProps} />
             <Footer />
         </>
     )
 }
+
+export default wrapper.withRedux(App)

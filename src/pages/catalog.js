@@ -6,7 +6,7 @@ import Filters from "@/components/Popups/Filters";
 import Beat from "@/components/Beat";
 import Creator from "@/components/Creator";
 
-const Catalog = () => {
+export default function Catalog() {
 
     const [visible, setVisible] = useState(false);
     const [filters, setFilters] = useState(null);
@@ -53,5 +53,3 @@ const Catalog = () => {
         </div>
     );
 };
-
-export default Catalog;
