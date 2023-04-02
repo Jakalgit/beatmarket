@@ -51,5 +51,19 @@
     }
 }
 @media (max-width: 991px) {
-
+    .window {
+        width: 40rem;
+        height: 14.7rem;
+        border-radius: 1.2rem;
+        box-shadow: 0 0 0.7rem 0.4rem rgba(48, 79, 254, 0.25);
+    }
+    .text {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 510px) {
+    .window {
+        width: 32rem;
+        height: 11.76rem;
+    }
 }

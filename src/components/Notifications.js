@@ -25,13 +25,32 @@ const Notifications = () => {
     );
 };
 
-const Notification = ({notification, array}) => {
+const Notification = ({notification}) => {
 
     const [x, setX] = useState("0")
     const [height, setHeight] = useState(100)
     const [display, setDisplay] = useState("flex")
 
     const {deleteNotification} = useActions()
+
+    if (typeof(window) !== "undefined") {
+        useEffect(() => {
+            const width = window.innerWidth
+            if (width > 991 && width <= 1199) {
+                setHeight(80)
+            } else if (width > 575 && width <= 991) {
+                setHeight(70)
+            } else if (width <= 575) [
+                setHeight(77)
+            ]
+        }, [window])
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            closeNotification()
+        }, 8000)
+    }, [])
 
     const closeNotification = () => {
         setX("-110%")
@@ -44,12 +63,6 @@ const Notification = ({notification, array}) => {
         }, 500)
     }
 
-    useEffect(() => {
-        setTimeout(() => {
-            closeNotification()
-        }, 8000)
-    }, [])
-
     return (
         <motion.div
             animate={{
@@ -60,6 +73,7 @@ const Notification = ({notification, array}) => {
                 type: "spring",
                 layout: { duration: 0.5 },
             }}
+            className={style.wrap}
         >
             <motion.div
                 initial={{x: "-110%", opacity: 0}}

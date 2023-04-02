@@ -144,6 +144,8 @@ export default function Messages() {
                             <motion.div
                                 className={style.chat}
                                 onClick={clickChat}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: false }}
                             >
                                 <Image src="" alt="prof-img" className={style.chat_preview}/>
