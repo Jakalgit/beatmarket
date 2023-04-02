@@ -1,7 +1,7 @@
 import style_back from "@/styles/components/filters.module.css"
 import style from "@/styles/components/reviews.module.css"
 import {CSSTransition} from "react-transition-group";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {LeftBlockView, RightBlockView} from "@/components/ReviewsLayouts/ViewReviews";
 import Image from "next/image";
 import {LeftBlockWrite, RightBlockWrite} from "@/components/ReviewsLayouts/WriteReview";

@@ -41,3 +41,15 @@
 .action:hover {
     cursor: pointer;
 }
+@media (max-width: 1199px) {
+    .window {
+        width: 46rem;
+        height: 17rem;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 991px) {
+
+}

@@ -101,12 +101,19 @@
     color: white;
     margin-bottom: 0;
 }
-.delete {
-    fill: rgba(229, 57, 53, 0.5);
+.area_svg {
     width: 2.4rem;
     height: 2.4rem;
-    margin-left: 2.5rem;
     transition: all 0.2s;
+}
+.delete {
+    fill: rgba(229, 57, 53, 0.5);
+    margin-left: 2.5rem;
+}
+.back {
+    fill: #82B1FF;
+    margin-right: 1rem;
+    display: none;
 }
 .delete:hover {
     fill: rgba(229, 57, 53, 1);
@@ -231,4 +238,285 @@
 .svg:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+@media (max-width: 1399px) {
+    .last_message {
+        width: 19rem;
+    }
+}
+@media (max-width: 1199px) {
+    .scl::-webkit-scrollbar {
+        width: 0.3rem;
+    }
+    .chat_preview {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 0.8rem;
+    }
+    .chat_name {
+        font-size: 1.3rem;
+    }
+    .last_message {
+        margin-top: 0.8rem;
+        width: 15rem;
+        font-size: 0.9rem;
+    }
+    .right {
+        padding-left: 0.8rem;
+    }
+    .time {
+        font-size: 1rem;
+    }
+    .message_view {
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        margin-top: 0.7rem;
+    }
+    .area {
+        padding: 1.8rem;
+        border-radius: 1.8rem;
+    }
+    .head_line {
+        padding-bottom: 1rem;
+    }
+    .name {
+        font-size: 1.4rem;
+    }
+    .area_svg {
+        width: 1.9rem;
+        height: 1.9rem;
+        margin-top: -0.2rem;
+    }
+    .delete {
+        margin-left: 1.8rem;
+    }
+    .user_id {
+        font-size: 1.1rem;
+    }
+    .day {
+        font-size: 1.3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .line_message {
+        margin-bottom: 0.7rem;
+        padding-top: 0.7rem;
+    }
+    .message {
+        padding: 0.5rem 0.7rem;
+        max-width: 65%;
+    }
+    .message_text {
+        font-size: 1rem;
+    }
+    .message_under_line {
+        margin-top: 0.2rem;
+    }
+    .viewed_svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.4rem;
+    }
+    .viewed_left {
+        margin-right: -0.5rem;
+    }
+    .message_time {
+        font-size: 0.9rem;
+    }
+    .under_line {
+        margin-top: 1rem;
+    }
+    .content {
+        font-size: 1.1rem;
+    }
+    .svg {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+@media (max-width: 991px) {
+    .scl::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+    .chats {
+        max-height: 75vh;
+    }
+    .chat {
+        padding: 0.6rem 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0.7rem;
+    }
+    .chat_preview {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.6rem;
+    }
+    .chat_name {
+        font-size: 1.1rem;
+    }
+    .last_message {
+        margin-top: 0.6rem;
+        width: 11.5rem;
+        font-size: 0.8rem;
+    }
+    .time {
+        font-size: 0.8rem;
+    }
+    .message_view {
+        width: 2.6rem;
+        height: 1.3rem;
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
+    }
+    .area {
+        height: 75vh;
+        padding: 1.4rem;
+        border-radius: 1.2rem;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+    .area_svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .delete {
+        margin-left: 1.4rem;
+    }
+    .user_id {
+        font-size: 0.9rem;
+    }
+    .day {
+        font-size: 1.1rem;
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+    }
+    .line_message {
+        margin-bottom: 0.4rem;
+        padding-top: 0.4rem;
+    }
+    .message {
+        padding: 0.4rem 0.6rem;
+    }
+    .message_text {
+        font-size: 0.9rem;
+    }
+    .message_under_line {
+        margin-top: 0.1rem;
+    }
+    .viewed_svg {
+        width: 1rem;
+        height: 1rem;
+    }
+    .message_time {
+        font-size: 0.8rem;
+    }
+    .content {
+        font-size: 0.9rem;
+    }
+    .svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+@media (max-width: 767px) {
+    .chat {
+        padding: 1rem 1.4rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+    }
+    .chat_preview {
+        width: 5rem;
+        height: 5rem;
+    }
+    .chat_name {
+        font-size: 1.4rem;
+    }
+    .last_message {
+        margin-top: 0.8rem;
+        width: 18rem;
+        font-size: 0.9rem;
+    }
+    .time {
+        font-size: 1rem;
+    }
+    .message_view {
+        width: 3rem;
+        height: 1.5rem;
+        font-size: 1rem;
+        margin-top: 0.9rem;
+    }
+    .area {
+        padding: 1.8rem;
+        border-radius: 1.6rem;
+    }
+    .head_line {
+        padding-bottom: 1.2rem;
+    }
+    .name {
+        font-size: 1.4rem;
+    }
+    .area_svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .delete {
+        margin-left: 1rem;
+    }
+    .back {
+        display: inline-flex;
+        margin-right: 1rem;
+    }
+    .user_id {
+        font-size: 1.1rem;
+    }
+    .day {
+        font-size: 1.3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .line_message {
+        margin-bottom: 0.8rem;
+        padding-top: 0.8rem;
+    }
+    .message {
+        padding: 0.6rem 0.8rem;
+    }
+    .message_text {
+        font-size: 1.1rem;
+    }
+    .message_under_line {
+        margin-top: 0.2rem;
+    }
+    .viewed_svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .message_time {
+        font-size: 0.9rem;
+    }
+    .content {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 575px) {
+    .area_col {
+        padding: 0;
+    }
+    .chats {
+        max-height: 85vh;
+    }
+    .area {
+        height: 85vh;
+        border-radius: 0;
+        background-color: black;
+    }
+}
+@media (max-width: 330px) {
+    .chat_preview {
+        width: 4rem;
+        height: 4rem;
+    }
 }

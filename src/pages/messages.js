@@ -2,13 +2,15 @@ import Grid from "@/components/Grid";
 import {Col} from "react-bootstrap";
 import style from "@/styles/pages/messages.module.css"
 import Image from "next/image";
+import {motion} from "framer-motion";
 import {useEffect, useRef, useState} from "react";
 import Attention from "@/components/Popups/Attention";
 import {useActions} from "@/hooks/useActions";
-import {useSelector} from "react-redux";
 import {add_notification} from "@/logic/functions";
 
 export default function Messages() {
+
+    const [windowWidth, setWindowWidth] = useState(-1)
 
     const [maxHeight, setMaxHeight] = useState(140)
     const [message, setMessage] = useState('')
@@ -22,6 +24,12 @@ export default function Messages() {
 
     const [showSend, setShowSend] = useState(false)
 
+    const [showArea, setShowArea] = useState(false)
+    const [opacityArea, setOpacityArea] = useState(1)
+
+    const [showList, setShowList] = useState(true)
+    const [opacityList, setOpacityList] = useState(1)
+
     const [attention, setAttention] = useState(false)
     const [delChatId, setDelChatId] = useState(-1)
 
@@ -29,11 +37,23 @@ export default function Messages() {
 
     if (typeof(window) !== "undefined") {
         useEffect(() => {
+            setWindowWidth(window.innerWidth)
             const width = window.innerWidth
             if (width > 991 && width <= 1299) {
                 setMaxHeight(100)
             } else if (width > 767 && width <= 991) {
+                setMaxHeight(80)
+            } else if (width > 575 && width <= 767) {
+                setMaxHeight(60)
+            }
 
+            if (width <= 767) {
+                setShowArea(false)
+            } else {
+                setOpacityArea(1)
+                setOpacityList(1)
+                setShowArea(true)
+                setShowList(true)
             }
         }, [window])
     }
@@ -48,21 +68,54 @@ export default function Messages() {
     }, [scrollableRef])
 
     useEffect(() => {
-        textareaRef.current.style.height = "0px";
-        const scrollHeight = textareaRef.current.scrollHeight
-        if (scrollHeight + 4 < maxHeight) {
-            underLineRef.current.style.height = scrollHeight + 15 + "px"
-            textareaRef.current.style.height = scrollHeight + "px"
-        } else {
-            underLineRef.current.style.height = maxHeight + 15 + "px"
-            textareaRef.current.style.height = maxHeight + "px"
-        }
-        if (message) {
-            setShowSend(true)
-        } else {
-            setShowSend(false)
+        if (showArea) {
+            textareaRef.current.style.height = "0px";
+            const scrollHeight = textareaRef.current.scrollHeight
+            if (scrollHeight + 4 < maxHeight) {
+                underLineRef.current.style.height = scrollHeight + 15 + "px"
+                textareaRef.current.style.height = scrollHeight + "px"
+            } else {
+                underLineRef.current.style.height = maxHeight + 15 + "px"
+                textareaRef.current.style.height = maxHeight + "px"
+            }
+            if (message) {
+                setShowSend(true)
+            } else {
+                setShowSend(false)
+            }
         }
     }, [message])
+
+    const clickChat = () => {
+        setCurrentChat({
+            name: "CAKE BUY BEATS"
+        })
+        if (windowWidth <= 767) {
+            setOpacityList(0)
+            setOpacityArea(0)
+            setTimeout(() => {
+                setShowList(false)
+                setTimeout(() => {
+                    setShowArea(true)
+                    setOpacityArea(1)
+                }, 100)
+            }, 550)
+        }
+    }
+
+    const clickBack = () => {
+        setCurrentChat(null)
+        if (windowWidth <= 767) {
+            setOpacityArea(0)
+            setTimeout(() => {
+                setShowArea(false)
+                setTimeout(() => {
+                    setShowList(true)
+                    setOpacityList(1)
+                }, 100)
+            }, 550)
+        }
+    }
 
     const updateAttention = (value) => {
         setAttention(value)
@@ -74,12 +127,25 @@ export default function Messages() {
 
     return (
         <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
-            <Attention visible={attention} setVisible={(value) => updateAttention(value)} setDelChat={(value) => updateDeleteChat(value)} />
+            <Attention
+                visible={attention}
+                setVisible={(value) => updateAttention(value)}
+                setDelChat={(value) => updateDeleteChat(value)}
+            />
             <Grid>
-                <Col xxl={4}>
-                    <div className={style.chats + ' ' + style.scl}>
+                <Col xxl={4} xl={4} lg={4} md={{span: 4, offset: 0}} sm={{span: 10, offset: 1}} xs={12}
+                     style={{display: showList ? "flex" : "none", justifyContent: "center"}}
+                >
+                    <motion.div
+                        className={style.chats + ' ' + style.scl}
+                        animate={{opacity: opacityList}}
+                    >
                         {[1,1,1,1,1,1,1,1,1,1,1,1,1].map(() =>
-                            <div className={style.chat}>
+                            <motion.div
+                                className={style.chat}
+                                onClick={clickChat}
+                                viewport={{ once: false }}
+                            >
                                 <Image src="" alt="prof-img" className={style.chat_preview}/>
                                 <div className={style.middle}>
                                     <h1 className={style.chat_name}>CAKE BUY BEATS</h1>
@@ -89,15 +155,36 @@ export default function Messages() {
                                     <p className={style.time}>19:24</p>
                                     <p className={style.message_view}>1</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )}
-                    </div>
+                    </motion.div>
                 </Col>
-                <Col xxl={8}>
-                    <div className={style.area}>
+                <Col className={style.area_col}
+                    xxl={8} xl={8} lg={8} md={{span: 8, offset: 0}} sm={{span: 10, offset: 1}} xs={12}
+                >
+                    <motion.div
+                        className={style.area}
+                        initial={{opacity: 0}}
+                        animate={{
+                            display: showArea ? "flex" : "none",
+                            opacity: opacityArea
+                        }}
+                        transition={{
+                            type: "spring",
+                            layout: { duration: 0.5 },
+                            bounce: 0,
+                        }}
+                    >
                         <div className={style.head_line}>
+                            <svg
+                                onClick={clickBack}
+                                className={style.area_svg + ' ' + style.back}
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"
+                            >
+                                <path d="m333.478 798.783-197-196q-6.13-6.131-8.978-13.109T124.652 575q0-7.696 2.848-14.674t8.978-13.109l197-197q10.826-10.826 27.783-11.326t28.783 11.326q11.826 11.826 11.826 28.283t-11.826 28.283L261.436 535.391h550.825q16.957 0 28.283 11.326T851.87 575q0 16.957-11.326 28.283t-28.283 11.326H261.436l128.608 128.608q10.826 10.826 11.044 27.283.217 16.457-11.044 28.283-11.826 11.826-28.283 11.826t-28.283-11.826Z"/>
+                            </svg>
                             <h1 className={style.name}>CAKE BUY BEATS</h1>
-                            <svg onClick={() => setAttention(true)} className={style.delete} xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+                            <svg onClick={() => setAttention(true)} className={style.area_svg + ' ' + style.delete} xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
                                 <path d="M261 936q-24 0-42-18t-18-42V306h-11q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T190 246h158q0-13 8.625-21.5T378 216h204q12.75 0 21.375 8.625T612 246h158q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T770 306h-11v570q0 24-18 42t-42 18H261Zm0-630v570h438V306H261Zm106 454q0 12.75 8.675 21.375 8.676 8.625 21.5 8.625 12.825 0 21.325-8.625T427 760V421q0-12.75-8.675-21.375-8.676-8.625-21.5-8.625-12.825 0-21.325 8.625T367 421v339Zm166 0q0 12.75 8.675 21.375 8.676 8.625 21.5 8.625 12.825 0 21.325-8.625T593 760V421q0-12.75-8.675-21.375-8.676-8.625-21.5-8.625-12.825 0-21.325 8.625T533 421v339ZM261 306v570-570Z"/>
                             </svg>
                             <p onClick={() => add_notification("Чат удалён", "Чат с @cakebuybeats удалён", 0, addNotification)} className={style.user_id}>@cakebuybeats</p>
@@ -106,7 +193,9 @@ export default function Messages() {
                             <div className={style.ribbon}>
                                 <p className={style.day}>14 февраля</p>
                                 {[1,2,1,2,1,2,1,2,1,2].map(i =>
-                                    <div className={(i === 1 ? style.left_message : style.right_message) + ' ' + style.line_message}>
+                                    <div className={(i === 1 ? style.left_message : style.right_message)
+                                        +' '+style.line_message}
+                                    >
                                         <div className={style.message}>
                                             <p className={style.message_text}>Здравствуйте, сколько стоит вот этот бит?</p>
                                             <div className={style.message_under_line}>
@@ -145,7 +234,7 @@ export default function Messages() {
                                 }
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </Col>
             </Grid>
         </div>
