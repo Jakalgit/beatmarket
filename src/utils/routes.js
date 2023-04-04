@@ -1,2 +1,5 @@
 export const CATALOG = "/catalog"
 export const MESSAGES = "/messages"
+export const BECOME_CREATOR = "/become"
+export const SUPPORT = "/support"
+export const QUESTIONS = "/questions"

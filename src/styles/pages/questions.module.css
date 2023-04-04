@@ -1,0 +1,35 @@
+.head {
+    text-align: center;
+}
+.list {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.href {
+    margin-bottom: 4vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: #82B1FF;
+    transition: all 0.2s;
+    display: inline-block;
+}
+.href:hover {
+    cursor: pointer;
+    color: white;
+}
+.policy {
+    margin-top: 20vh;
+    text-decoration: underline;
+}
+.under_line {
+    text-decoration: underline;
+    display: inline-block;
+}
+.imt {
+    font-size: 2.2rem;
+}
+.btn_mt {
+    margin-top: 50vh;
+}

@@ -1,4 +1,4 @@
-import style_fb from "@/styles/pages/feedback.module.css"
+import style_fb from "@/styles/pages/support.module.css"
 import style from "@/styles/pages/become.module.css"
 import Grid from "@/components/Grid";
 import Image from "next/image";
@@ -8,7 +8,11 @@ const Become = () => {
     return (
         <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
             <Grid>
-                <div className={style_fb.pd}>
+                <motion.div
+                    className={style_fb.pd}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
                     <h1 className={style_fb.head}>Аккаунт создателя</h1>
                     <p className={style_fb.text + ' ' + style_fb.txt_mt}>
                         Продавайте свои музыкальные произведения, собирайте звезды чтобы оказаться в списках лучших,
@@ -45,7 +49,7 @@ const Become = () => {
                             </motion.button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </Grid>
         </div>
     );

@@ -50,7 +50,7 @@
     color: rgba(130, 177, 255, 0.5);
 }
 .button_div {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;

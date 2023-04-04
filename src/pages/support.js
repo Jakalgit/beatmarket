@@ -1,12 +1,18 @@
 import Grid from "@/components/Grid";
-import style from "@/styles/pages/feedback.module.css"
+import style from "@/styles/pages/support.module.css"
 import {motion} from "framer-motion";
+import Link from "next/link";
+import {QUESTIONS} from "@/utils/routes";
 
-export default function Feedback() {
+export default function Support() {
     return (
         <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
             <Grid>
-                <div className={style.pd}>
+                <motion.div
+                    className={style.pd}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
                     <h1 className={style.head}>Обратная связь</h1>
                     <p className={style.text + ' ' + style.txt_mt}>
                         Если у вас возникли проблемы при работе сайтом, вы можете написать их здесь, напишите в подробностях
@@ -14,7 +20,7 @@ export default function Feedback() {
                     <div className={style.text}>
                         что у вас не работает, вы можете написать
                         на почту <p className={style.bold}>beatmarket@yandex.ru</p>, или
-                        посмотрите <p className={style.href}>часто задаваемые вопросы</p>.
+                        посмотрите <Link href={QUESTIONS} className={style.href}>часто задаваемые вопросы</Link>.
                     </div>
                     <p className={style.text + ' ' + style.txt_mt}>
                         Так же мы рассмотрим ваши пожелания и рекомендации по улучшению проекта.
@@ -28,7 +34,7 @@ export default function Feedback() {
                             Отправить
                         </motion.button>
                     </div>
-                </div>
+                </motion.div>
             </Grid>
         </div>
     );
