@@ -1,0 +1,66 @@
+.line {
+    display: flex;
+    justify-content: center;
+}
+.stars {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.dates {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.star {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+.data {
+    margin-top: 3vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: #82B1FF;
+}
+.danger {
+    color: #E53935;
+}
+.btn_mt {
+    margin-top: 10vh;
+    margin-left: 0;
+}
+@media (max-width: 1199px) {
+    .stars {
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .star {
+        width: 3rem;
+        height: 3rem;
+    }
+    .dates {
+        margin-top: 5vh;
+    }
+    .data {
+        margin-top: 2vh;
+    }
+}
+@media (max-width: 991px) {
+    .star {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .dates {
+        margin-top: 4vh;
+    }
+    .data {
+        font-size: 1.3rem;
+    }
+    .btn_mt {
+        margin-top: 7vh;
+    }
+}

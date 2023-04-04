@@ -3,5 +3,156 @@
     font-size: 2.6rem;
     color: white;
     font-weight: bold;
-    margin-top: 7rem;
+    margin-top: 4vh;
+}
+.txt_mt {
+    margin-top: 1.7rem;
+}
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+}
+.bold {
+    display: inline-block;
+    font-weight: bold;
+}
+.bold:hover {
+    cursor: pointer;
+}
+.href {
+    color: #82B1FF;
+    display: inline-block;
+    transition: all 0.2s;
+}
+.href:hover {
+    cursor: pointer;
+    color: white;
+}
+.textarea {
+    background-color: rgba(130, 177, 255, 0.1);
+    width: 100%;
+    height: 40vh;
+    margin-top: 5vh;
+    border-radius: 2.4rem;
+    padding: 2.6rem 2.1rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.textarea::-webkit-scrollbar {
+    width: 0;
+}
+.textarea::placeholder {
+    color: rgba(130, 177, 255, 0.5);
+}
+.button_div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 3rem;
+    width: 17rem;
+    height: 4rem;
+}
+.button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+    background-color: #304FFE;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem
+}
+@media (max-width: 1199px) {
+    .head {
+        font-size: 2.3rem;
+        margin-top: 3vh;
+    }
+    .txt_mt {
+        margin-top: 1.4rem;
+    }
+    .text {
+        font-size: 1.3rem;
+    }
+    .textarea {
+        height: 35vh;
+        margin-top: 4vh;
+        border-radius: 2rem;
+        padding: 2.1rem 1.8rem;
+    }
+    .button_div {
+        width: 15rem;
+        height: 3.8rem;
+        margin-top: 2rem;
+    }
+    .button {
+        font-size: 1.2rem;
+        border-radius: 0.7rem;
+    }
+}
+@media (max-width: 991px) {
+    .head {
+        font-size: 2rem;
+        margin-top: 5vh;
+    }
+    .txt_mt {
+        margin-top: 1.1rem;
+    }
+    .text {
+        font-size: 1.1rem;
+    }
+    .textarea {
+        margin-top: 3vh;
+        border-radius: 1.8rem;
+        padding: 1.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    .button_div {
+        width: 14rem;
+        height: 3.6rem;
+    }
+}
+@media (max-width: 767px) {
+    .head {
+        margin-top: 0;
+        font-size: 1.7rem;
+    }
+    .txt_mt {
+        margin-top: 0.9rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .textarea {
+        height: 30vh;
+        border-radius: 1.5rem;
+        padding: 1.6rem 1.3rem;
+        font-size: 1rem;
+    }
+    .button_div {
+        width: 12rem;
+        height: 3rem;
+        margin-top: 1.5rem;
+    }
+    .button {
+        font-size: 1rem;
+        border-radius: 0.6rem;
+    }
+}
+@media (max-width: 575px) {
+    .pd {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    .text {
+        font-size: 0.9rem;
+    }
 }
