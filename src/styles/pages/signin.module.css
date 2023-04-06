@@ -1,0 +1,132 @@
+.up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+}
+.head {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+.text {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 0.9rem;
+}
+.href {
+    display: inline-block;
+    color: #82B1FF;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+.href:hover {
+    cursor: pointer;
+    color: white;
+}
+.btn_wrap {
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.button {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: #304FFE;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+    border: none;
+}
+.cont_google {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+.cont_google:hover {
+    cursor: pointer;
+}
+.google {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1.1rem;
+}
+@media (max-width: 1199px) {
+    .head {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .text {
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+    }
+    .btn_wrap {
+        height: 3.3rem;
+        margin-top: 4vh;
+    }
+    .button {
+        padding-left: 3.3rem;
+        padding-right: 3.3rem;
+        font-size: 1.2rem;
+        border-radius: 0.8rem;
+    }
+    .cont_google {
+        font-size: 1.2rem;
+        margin-bottom: 7vh;
+    }
+    .google {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.8rem;
+    }
+}
+@media (max-width: 991px) {
+    .center {
+        margin-top: 0;
+    }
+    .head {
+        font-size: 1.9rem;
+        margin-bottom: 0.3rem;
+    }
+    .text {
+        font-size: 0.9rem;
+    }
+    .btn_wrap {
+        height: 2.64rem;
+    }
+    .button {
+        padding-left: 2.64rem;
+        padding-right: 2.64rem;
+        font-size: 1rem;
+        border-radius: 0.7rem;
+    }
+    .cont_google {
+        font-size: 0.9rem;
+        margin-bottom: 7vh;
+    }
+    .google {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,135 @@
+.info {
+    margin-top: 5vh;
+    width: 100%;
+    padding-bottom: 3.8rem;
+    border-bottom: 0.1rem solid #304FFE;
+}
+.line {
+    display: flex;
+}
+.preview {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 1rem;
+    margin-right: 12%;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.flex_line {
+    display: flex;
+    align-items: center;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.8rem;
+    color: white;
+    font-weight: bold;
+}
+.bpm {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.stars_mt {
+    margin-top: 1rem;
+}
+.star {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+}
+.count {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+.count:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.author {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: #82B1FF;
+    margin-top: 1.5rem;
+    transition: all 0.2s;
+}
+.author:hover {
+    color: white;
+}
+.mt_auto {
+    margin-top: auto;
+}
+.variants {
+    width: 24rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+    background-color: #304FFE;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}
+.message {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+}
+.message:hover {
+    cursor: pointer;
+}
+.message:hover .svg {
+    fill: white;
+}
+.message:hover .message_text {
+    color: white;
+}
+.svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 0.5rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+}
+.message_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+    transition: all 0.2s;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.track_line {
+    display: flex;
+    align-items: center;
+}
+.current {
+    border: 0.1rem solid white;
+}
+.pos {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+}

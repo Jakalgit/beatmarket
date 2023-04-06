@@ -2,9 +2,10 @@ import style from "@/styles/pages/questions.module.css"
 import style_fb from "@/styles/pages/support.module.css"
 import {motion} from "framer-motion";
 
-const Question1 = () => {
+const Question1 = ({setCurrentQuest}) => {
     return (
         <motion.div
+            className={style.flex}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
         >
@@ -22,6 +23,7 @@ const Question1 = () => {
             </div>
             <div className={style_fb.button_div + ' ' + style.btn_mt}>
                 <motion.button
+                    onClick={() => setCurrentQuest(-1)}
                     className={style_fb.button}
                     whileTap={{scale: 0.95}}
                 >
