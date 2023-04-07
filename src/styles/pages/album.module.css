@@ -50,12 +50,7 @@
     color: white;
     margin-left: 1rem;
     margin-top: 0.1rem;
-    text-decoration: underline;
     transition: all 0.2s;
-}
-.count:hover {
-    transform: scale(1.1);
-    cursor: pointer;
 }
 .author {
     font-family: 'Manrope', sans-serif;
@@ -117,6 +112,15 @@
 .track_line {
     display: flex;
     align-items: center;
+    padding: 1.5rem 2.3rem 1.5rem 1.5rem;
+    transition: all 0.2s;
+}
+.track_line:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.track_border {
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
 .current {
     border: 0.1rem solid white;
@@ -132,4 +136,190 @@
     justify-content: center;
     color: white;
     border-radius: 50%;
+}
+.track_name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+.reaction {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    color: #82B1FF;
+    margin-left: auto;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+.reaction:hover {
+    color: white;
+    cursor: pointer;
+}
+.time {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    margin-left: 2.6rem;
+}
+@media (max-width: 1399px) {
+    .info {
+        margin-top: 3vh;
+    }
+    .preview {
+        width: 18rem;
+        height: 18rem;
+        margin-right: 8%;
+    }
+}
+@media (max-width: 1199px) {
+    .info {
+        margin-top: 2vh;
+        padding-bottom: 2.8rem;
+    }
+    .right {
+        padding-bottom: 0.3rem;
+        padding-top: 0.3rem;
+    }
+    .preview {
+        width: 17rem;
+        height: 17rem;
+    }
+    .name {
+        font-size: 2.6rem;
+    }
+    .bpm {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+    .stars_mt {
+        margin-top: 0.7rem;
+    }
+    .star {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 0.6rem;
+    }
+    .count {
+        font-size: 1.2rem;
+        margin-left: 0.7rem;
+    }
+    .author {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+    .variants {
+        width: 20rem;
+        height: 3.4rem;
+        font-size: 1.2rem;
+    }
+    .message {
+        height: 3.4rem;
+        margin-left: 4rem;
+    }
+    .svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .message_text {
+        font-size: 1.2rem;
+    }
+    .list {
+        margin-top: 4vh;
+    }
+    .track_line {
+        padding: 1.2rem 2rem 1.2rem 1.5rem;
+    }
+    .pos {
+        font-size: 1.4rem;
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    .track_name {
+        font-size: 1.4rem;
+    }
+    .reaction {
+        font-size: 1.1rem;
+    }
+    .time {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .info {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .preview {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 0.8rem;
+        margin-right: 6%;
+    }
+    .name {
+        font-size: 2.3rem;
+    }
+    .bpm {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+    .stars_mt {
+        margin-top: 0.5rem;
+    }
+    .star {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: 0.4rem;
+    }
+    .count {
+        font-size: 1.1rem;
+    }
+    .author {
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+    }
+    .variants {
+        width: 18rem;
+        height: 3rem;
+        font-size: 1.1rem;
+        border-radius: 0.6rem;
+    }
+    .message {
+        height: 3rem;
+        margin-left: 3rem;
+    }
+    .svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .message_text {
+        font-size: 1.1rem;
+    }
+    .list {
+        margin-top: 3vh;
+    }
+    .track_line {
+        padding: 1.2rem 1.8rem 1.2rem 1.5rem;
+    }
+    .pos {
+        font-size: 1.2rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .track_name {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+    .reaction {
+        font-size: 1rem;
+    }
+    .time {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+}
+@media (max-width: 767px) {
+    
 }

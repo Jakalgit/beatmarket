@@ -1,0 +1,44 @@
+.window {
+    width: 63rem;
+    height: 26rem;
+    box-shadow: 0 0 2rem 1rem rgba(48, 79, 254, 0.25);
+    border: 0.1rem solid #304FFE;
+    background-color: black;
+    border-radius: 1.8rem;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+.line {
+    display: flex;
+    align-items: center;
+}
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 1rem;
+}
+.stars {
+    margin-top: 3vh;
+    justify-content: center;
+}
+.star {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+.button {
+    width: 17rem;
+    height: 4rem;
+    background-color: #304FFE;
+    border-radius: 0.9rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: auto;
+    margin-left: auto;
+    outline: none;
+    border: none;
+}

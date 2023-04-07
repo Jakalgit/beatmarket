@@ -3,8 +3,23 @@ import style from "@/styles/pages/album.module.css"
 import Image from "next/image";
 import Grid from "@/components/Grid";
 import Link from "next/link";
+import Variants from "@/components/Popups/Variants";
+import {useState} from "react";
+import LeaveReaction from "@/components/Popups/LeaveReaction";
 
 const Album = () => {
+
+    const [visibleVariants, setVisibleVariants] = useState(false)
+    const [visibleReact, setVisibleReact] = useState(false)
+
+    const updateVisibleReact = (value) => {
+        setVisibleReact(value)
+    }
+
+    const updateVisibleVariants = (value) => {
+        setVisibleVariants(value)
+    }
+
     return (
         <motion.div
             className="height"
@@ -12,6 +27,8 @@ const Album = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
         >
+            <Variants visible={visibleVariants} setVisible={(value) => updateVisibleVariants(value)} />
+            <LeaveReaction visible={visibleReact} setVisible={(value) => updateVisibleReact(value)} />
             <div className={style.info}>
                 <Grid>
                     <div className={style.line}>
@@ -27,7 +44,7 @@ const Album = () => {
                                 <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
                                 <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
                                 <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
-                                <p className={style.count}>12 452 623</p>
+                                <p className={style.count}>12 452 623 реакций</p>
                             </div>
                             <div className={style.flex_line}>
                                 <Link className={style.author} href="/">VisaGangBeatz</Link>
@@ -36,6 +53,7 @@ const Album = () => {
                                 <motion.button
                                     className={style.variants}
                                     whileTap={{scale: 0.95}}
+                                    onClick={() => setVisibleVariants(true)}
                                 >
                                     Посмотреть варианты
                                 </motion.button>
@@ -54,6 +72,9 @@ const Album = () => {
                 <div className={style.list}>
                     <div className={style.track_line}>
                         <p className={style.pos + ' ' + style.current}>1</p>
+                        <h1 className={style.track_name}>OVERHEAVEN (Synthware)</h1>
+                        <p onClick={() => setVisibleReact(true)} className={style.reaction}>Оставить реакцию</p>
+                        <p className={style.time}>1 : 41</p>
                     </div>
                 </div>
             </Grid>

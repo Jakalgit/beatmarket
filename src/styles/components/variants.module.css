@@ -1,0 +1,200 @@
+.left {
+    padding: 4rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.separate {
+    height: 100%;
+    width: 0;
+    border-left: 0.1rem solid #304FFE;
+}
+.right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 2rem;
+}
+.close_line {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.track {
+    display: flex;
+}
+.track_info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+.preview {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 2.3rem;
+    border-radius: 0.8rem;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.bpm {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.6rem;
+}
+.price {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+}
+.list {
+    margin-top: 3.5rem;
+    max-height: 20.8rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.list::-webkit-scrollbar {
+    width: 0;
+}
+.variant {
+    display: flex;
+    align-items: center;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    height: 6rem;
+    margin-bottom: 1.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+.variant:hover {
+    border-color: white;
+    cursor: pointer;
+}
+.variant:hover .round {
+    border-color: white;
+}
+.variant:hover .check {
+    fill: white;
+}
+.variant:hover .current_name {
+    color: white;
+}
+.round {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.check {
+    width: 2rem;
+    height: 2rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+}
+.var_name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    margin-left: 1.3rem;
+    color: white;
+}
+.current {
+    border-color: #82B1FF;
+}
+.current_name {
+    color: #82B1FF;
+}
+.message {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+.message:hover {
+    cursor: pointer;
+}
+.message:hover .write_text {
+    color: white;
+}
+.message:hover .svg {
+    fill: white;
+}
+.svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: #82B1FF;
+    transition: all 0.2s;
+}
+.write_text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+    margin-left: 0.5rem;
+    transition: all 0.2s;
+}
+.button {
+    width: 22rem;
+    height: 4rem;
+    background-color: #304FFE;
+    border-radius: 0.8rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 3rem;
+}
+.conditions {
+    width: 100%;
+    margin-top: 3rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0.8rem 1rem;
+    max-height: 20rem;
+}
+.conditions::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 0.2rem;
+    border-radius: 0.2rem;
+}
+.conditions::-webkit-scrollbar-thumb {
+    background-color: #82B1FF;
+    border-radius: 0.2rem;
+}
+.condition {
+    display: flex;
+    margin-bottom: 1.1rem;
+}
+.dot {
+    display: inline-block;
+    background-color: #82B1FF;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    margin-top: 0.3rem;
+}
+.cond_text {
+    display: inline-block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 0.7rem;
+    width: calc(100% - 1.2rem);
+}
+.note {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: auto;
+    text-align: center;
+}
