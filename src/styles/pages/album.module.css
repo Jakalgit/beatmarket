@@ -321,5 +321,132 @@
     }
 }
 @media (max-width: 767px) {
-    
+    .info {
+        padding-bottom: 1.2rem;
+    }
+    .preview {
+        width: 11rem;
+        height: 11rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .bpm {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    .stars_mt {
+        margin-top: 0.1rem;
+    }
+    .star {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.3rem;
+    }
+    .count {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .author {
+        font-size: 1.2rem;
+        margin-top: 0.3rem;
+    }
+    .variants {
+        width: 14rem;
+        height: 2.4rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+    }
+    .message {
+        height: 2.4rem;
+        margin-left: 2rem;
+    }
+    .svg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .message_text {
+        font-size: 1rem;
+    }
+    .list {
+        margin-top: 2vh;
+    }
+    .track_line {
+        padding: 0.9rem 1.5rem 0.9rem 1.2rem;
+    }
+    .pos {
+        font-size: 1rem;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    .track_name {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    .reaction {
+        font-size: 0.9rem;
+    }
+    .time {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 575px) {
+    .small_line {
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex_line {
+        justify-content: center;
+    }
+    .preview {
+        margin-right: 0;
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: 2rem;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .bpm {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+    .stars_mt {
+        margin-top: 0.6rem;
+    }
+    .star {
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
+    }
+    .count {
+        margin-left: 0;
+        margin-top: 0.2rem;
+    }
+    .author {
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+    }
+    .mt_auto {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .variants {
+        width: 17rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        border-radius: 0.6rem;
+    }
+    .message {
+        margin-top: 1rem;
+        margin-left: 0;
+        height: 3rem;
+    }
+    .svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .message_text {
+        font-size: 1.2rem;
+    }
 }

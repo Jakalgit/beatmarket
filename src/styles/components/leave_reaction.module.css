@@ -42,3 +42,72 @@
     outline: none;
     border: none;
 }
+@media (max-width: 1199px) {
+    .window {
+        width: 56rem;
+        height: 23.1rem;
+        border-radius: 1.6rem;
+        padding: 1.4rem;
+    }
+    .text {
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 991px) {
+    .window {
+        width: 52rem;
+        height: 21.45rem;
+    }
+    .star {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .text {
+        font-size: 1.1rem;
+    }
+    .button {
+        width: 14rem;
+        height: 3.3rem;
+        border-radius: 0.7rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 767px) {
+    .window {
+        width: 42rem;
+        height: 17.3rem;
+        border-radius: 1.4rem;
+        padding: 1.2rem;
+        box-shadow: 0 0 1rem 0.5rem rgba(48, 79, 254, 0.25);
+    }
+    .star {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
+    }
+    .text {
+        font-size: 1rem;
+        margin-top: 0.4rem;
+    }
+    .button {
+        width: 12rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 575px) {
+    .window {
+        width: 35rem;
+        height: 14.4rem;
+        border-radius: 1.2rem;
+    }
+    .star {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

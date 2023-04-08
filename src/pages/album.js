@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import style from "@/styles/pages/album.module.css"
+import style_fb from "@/styles/pages/support.module.css"
 import Image from "next/image";
 import Grid from "@/components/Grid";
 import Link from "next/link";
@@ -20,9 +21,18 @@ const Album = () => {
         setVisibleVariants(value)
     }
 
+    const openVariants = () => {
+        setVisibleVariants(true)
+    }
+
+    const openReaction = (e) => {
+        e.stopPropagation()
+        setVisibleReact(true)
+    }
+
     return (
         <motion.div
-            className="height"
+            className={style_fb.pd + ' height'}
             style={{display: 'flex', flexDirection: 'column'}}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -31,19 +41,21 @@ const Album = () => {
             <LeaveReaction visible={visibleReact} setVisible={(value) => updateVisibleReact(value)} />
             <div className={style.info}>
                 <Grid>
-                    <div className={style.line}>
+                    <div className={style.line + ' ' + style.small_line}>
                         <Image alt="preview" src={require("@/img/preview.png")} className={style.preview}/>
                         <div className={style.right}>
                             <div className={style.flex_line}>
                                 <h1 className={style.name}>OVERHEAVEN (Synthware)</h1>
                                 <p className={style.bpm}>170 bpm</p>
                             </div>
-                            <div className={style.flex_line + ' ' + style.stars_mt}>
-                                <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
-                                <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
-                                <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
-                                <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
-                                <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                            <div className={style.flex_line + ' ' + style.stars_mt + ' ' + style.small_line}>
+                                <div>
+                                    <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                                    <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                                    <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                                    <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                                    <Image alt="star" src={require("@/img/star.png")} className={style.star}/>
+                                </div>
                                 <p className={style.count}>12 452 623 реакций</p>
                             </div>
                             <div className={style.flex_line}>
@@ -53,7 +65,7 @@ const Album = () => {
                                 <motion.button
                                     className={style.variants}
                                     whileTap={{scale: 0.95}}
-                                    onClick={() => setVisibleVariants(true)}
+                                    onClick={openVariants}
                                 >
                                     Посмотреть варианты
                                 </motion.button>
@@ -73,7 +85,7 @@ const Album = () => {
                     <div className={style.track_line}>
                         <p className={style.pos + ' ' + style.current}>1</p>
                         <h1 className={style.track_name}>OVERHEAVEN (Synthware)</h1>
-                        <p onClick={() => setVisibleReact(true)} className={style.reaction}>Оставить реакцию</p>
+                        <p onClick={(e) => openReaction(e)} className={style.reaction}>Оставить реакцию</p>
                         <p className={style.time}>1 : 41</p>
                     </div>
                 </div>
