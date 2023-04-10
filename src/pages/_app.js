@@ -7,6 +7,7 @@ import {useState} from "react";
 import Notifications from "@/components/Notifications";
 import {wrapper} from "@/store";
 import AppWrapper from "@/components/AppWrapper";
+import Player from "@/components/Player";
 
 function App({ Component, pageProps }) {
 
@@ -23,6 +24,7 @@ function App({ Component, pageProps }) {
             <Navbar setMenuLeft={(value) => changeMenuLeft(value)} />
             <AppWrapper Component={Component} pageProps={pageProps} />
             <Footer />
+            <Player />
         </>
     )
 }

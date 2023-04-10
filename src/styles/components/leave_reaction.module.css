@@ -110,4 +110,15 @@
         width: 1.5rem;
         height: 1.5rem;
     }
+    .stars {
+        margin-top: 1vh;
+    }
+    .text {
+        font-size: 0.9rem;
+    }
+    .button {
+        width: 10rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
 }

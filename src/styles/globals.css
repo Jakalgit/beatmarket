@@ -28,6 +28,14 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+input[type=range]  {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
 @media (max-width: 1199px) {
   ::-webkit-scrollbar {
     background-color: black;

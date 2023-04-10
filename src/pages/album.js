@@ -44,7 +44,7 @@ const Album = () => {
                     <div className={style.line + ' ' + style.small_line}>
                         <Image alt="preview" src={require("@/img/preview.png")} className={style.preview}/>
                         <div className={style.right}>
-                            <div className={style.flex_line}>
+                            <div className={style.flex_line + ' ' + style.small_line}>
                                 <h1 className={style.name}>OVERHEAVEN (Synthware)</h1>
                                 <p className={style.bpm}>170 bpm</p>
                             </div>

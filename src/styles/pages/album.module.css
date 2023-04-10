@@ -108,6 +108,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 .track_line {
     display: flex;
@@ -409,8 +410,9 @@
         font-size: 1.8rem;
     }
     .bpm {
-        font-size: 0.9rem;
-        margin-left: 0.5rem;
+        font-size: 1.1rem;
+        margin-left: 0;
+        margin-top: 0.6rem;
     }
     .stars_mt {
         margin-top: 0.6rem;

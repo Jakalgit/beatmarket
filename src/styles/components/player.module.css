@@ -1,0 +1,54 @@
+.block {
+    width: 100%;
+    height: 7.5rem;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 0.7rem;
+}
+.player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(2.8rem);
+    z-index: 4;
+}
+.range {
+    position: absolute;
+    width: 100%;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+.range::-webkit-slider-runnable-track {
+    border-radius: 0;
+    height: 0.7rem;
+    background-color: #82B1FF;
+}
+.range::-webkit-slider-thumb {
+    width: 2rem;
+    height: 2rem;
+    background: #304FFE;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -0.65rem;
+}
+.range::-moz-range-track {
+    border-radius: 0;
+    height: 0.7rem;
+    background-color: #82B1FF;
+}
+.range::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    background-color: #304FFE;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -0.65rem;
+}
+.range:focus::-ms-fill-lower {
+    background: #304FFE;
+}
