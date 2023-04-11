@@ -6,7 +6,6 @@
     border-radius: 1.8rem;
     box-shadow: 0 0 1rem 0.7rem rgba(48, 79, 254, 0.25);
     display: flex;
-    transform: scale(1.12);
 }
 .left {
     width: 65%;
