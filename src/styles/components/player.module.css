@@ -21,6 +21,20 @@
 .wrapper:hover {
     cursor: pointer;
 }
+.wrapper:hover .currentTime {
+    opacity: 1;
+}
+.currentTime {
+    position: absolute;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    top: -3rem;
+    opacity: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: opacity 0.1s;
+}
 .range {
     position: absolute;
     width: 50%;
@@ -36,6 +50,7 @@
 }
 .line {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 .part {
@@ -44,19 +59,24 @@
 }
 .one {
     justify-content: flex-start;
-    flex: 1 0 auto;
+    width: 43%;
 }
 .two {
-    flex: 1 1 auto;
+    justify-content: center;
+    width: 14%;
 }
 .three {
-    flex: 1 2 auto;
+    width: 43%;
+    justify-content: flex-end;
 }
 .preview {
     width: 5rem;
     height: 5rem;
     border-radius: 0.3rem;
     margin-right: 1rem;
+}
+.preview:hover {
+    cursor: pointer;
 }
 .nameBlock {
     display: flex;
@@ -88,4 +108,202 @@
 .author:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+.svg {
+    transition: all 0.2s;
+}
+.svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.switch {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: white;
+}
+.play {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: white;
+}
+.sound {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: white;
+    margin-right: 1.4rem;
+}
+.volumeWrapper {
+    position: relative;
+    width: 15rem;
+}
+.volLine {
+    height: 0.4rem;
+    border-radius: 0.2rem;
+}
+.volume {
+    position: absolute;
+    width: 15rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+.leftLine {
+    position: absolute;
+    background-color: white;
+}
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    background: white;
+    cursor: ew-resize;
+    box-shadow: 0 0 0.2rem 0 #555;
+    transition: background .3s ease-in-out;
+}
+.volume::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+.download {
+    margin-left: 4.1rem;
+    margin-right: 0;
+}
+@media (max-width: 1199px) {
+    .block {
+        height: 6rem;
+    }
+    .currentTime {
+        font-size: 1.2rem;
+        top: -2.5rem;
+    }
+    .preview {
+        width: 4rem;
+        height: 4rem;
+    }
+    .name {
+        font-size: 1rem;
+    }
+    .bpm {
+        font-size: 0.8rem;
+    }
+    .author {
+        font-size: 0.9rem;
+        margin-top: 0.7rem;
+    }
+    .switch {
+        width: 2rem;
+        height: 2rem;
+    }
+    .play {
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+    .sound {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-right: 1rem;
+    }
+    .volumeWrapper {
+        width: 12rem;
+    }
+    .volLine {
+        height: 0.3rem;
+    }
+    .volume {
+        width: 12rem;
+    }
+    .volume::-webkit-slider-thumb {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .download {
+        margin-left: 3.1rem;
+    }
+    .svg:hover {
+        cursor: pointer;
+        transform: scale(1);
+    }
+}
+@media (max-width: 767px) {
+    .block {
+        height: 5.5rem;
+    }
+    .currentTime {
+        display: none;
+    }
+    .preview {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .name {
+        font-size: 0.9rem;
+    }
+    .bpm {
+        font-size: 0.7rem;
+    }
+    .author {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .switch {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .play {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+    }
+    .sound {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: none;
+    }
+    .volumeWrapper {
+        display: none;
+    }
+    .svg {
+        display: block;
+    }
+}
+@media (max-width: 575px) {
+    .one {
+        justify-content: flex-start;
+        width: 75%;
+    }
+    .two {
+        width: 25%;
+    }
+    .three {
+        width: 0;
+    }
+    .wrapper {
+        height: 1.2rem;
+    }
+    .block {
+        height: 8rem;
+    }
+    .sound {
+        display: none;
+    }
+    .switch {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .play {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .preview {
+        width: 4rem;
+        height: 4rem;
+    }
 }

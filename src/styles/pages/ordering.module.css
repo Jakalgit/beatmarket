@@ -1,0 +1,317 @@
+.line {
+    display: flex;
+    align-items: center;
+}
+.preview {
+    width: 20rem;
+    height: 20rem;
+    margin-right: 4rem;
+    border-radius: 0.8rem;
+}
+.nameBlock {
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+}
+.bpm {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.type {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: #82B1FF;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.intoAccount {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.buttonWrapper {
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    background-color: #304FFE;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+}
+.checkout {
+    width: 24rem;
+    height: 4rem;
+}
+.under {
+    margin-top: 12vh;
+}
+.typePay {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.typePayText {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
+}
+.payBlock {
+    display: flex;
+    align-items: center;
+    margin-top: 1.8rem;
+}
+.payBlock:hover {
+    cursor: pointer;
+}
+.payImage {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+    margin-right: 0.9rem;
+}
+.payName {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
+.currentPay {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    border: 0.3rem solid white;
+    border-radius: 50%;
+    margin-left: auto;
+    opacity: 0;
+}
+.conditionsBlock {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 20%;
+}
+.conditions {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 85%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.conditions::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 0.3rem;
+    border-radius: 0.2rem;
+}
+.conditions::-webkit-scrollbar-thumb {
+    background-color: #82B1FF;
+    border-radius: 0.2rem;
+}
+.condition {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.9rem;
+    padding-left: 0.8rem;
+}
+.dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #82B1FF;
+    border-radius: 50%;
+    margin-top: 0.3rem;
+    margin-right: 0.4rem;
+}
+.text {
+    width: 97%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+}
+.note {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: auto;
+    text-align: center;
+}
+.right {
+    width: 24rem;
+    margin-left: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    background-color: black;
+    border: 0.1rem solid #304FFE;
+    border-radius: 0.8rem;
+    color: #82B1FF;
+    outline: none;
+    height: 4rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+}
+.input::placeholder {
+    color: rgba(130, 177, 255, 0.6);
+}
+.code {
+    width: 48%;
+    text-align: center;
+}
+.fio {
+    width: 100%;
+    margin-top: auto;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+.activate {
+    width: 48%;
+    height: 4rem;
+    margin-left: 4%;
+}
+.infoBlock {
+    margin-top: auto;
+}
+.info {
+    font-family: 'Manrope', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+.infoSmall {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.infoLarge {
+    font-size: 1.8rem;
+    margin-bottom: 8vh;
+}
+.href {
+    display: inline-block;
+    color: #82B1FF;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+.href:hover {
+    cursor: pointer;
+    color: white;
+}
+@media (max-width: 1399px) {
+    .preview {
+        width: 17rem;
+        height: 17rem;
+    }
+    .name {
+        font-size: 2.4rem;
+    }
+    .bpm {
+        font-size: 1.6rem;
+    }
+    .type {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .intoAccount {
+        font-size: 1.2rem;
+    }
+    .checkout {
+        width: 20rem;
+        height: 3.6rem;
+    }
+    .button {
+        border-radius: 0.6rem;
+        font-size: 1.3rem;
+    }
+    .under {
+        margin-top: 8vh;
+    }
+    .typePayText {
+        font-size: 2rem;
+    }
+    .payBlock {
+        margin-top: 1.5rem;
+    }
+    .payImage {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .payName {
+        font-size: 1.6rem;
+    }
+    .currentPay {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .conditionsBlock {
+        height: 80%;
+    }
+    .conditions {
+        max-height: 75%;
+    }
+    .right {
+        height: 80%;
+    }
+    .input {
+        height: 3.6rem;
+        border-radius: 0.6rem;
+    }
+    .activate {
+        height: 3.6rem;
+    }
+    .infoSmall {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .infoLarge {
+        margin-bottom: 6vh;
+        font-size: 1.6rem;
+    }
+}
+@media (max-height: 1199px) {
+    .preview {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 0.6rem;
+    }
+    .name {
+        font-size: 2.1rem;
+    }
+    .bpm {
+        font-size: 1.4rem;
+        margin-top: 0;
+    }
+    .type {
+        font-size: 1.3rem;
+        margin-top: 1.1rem;
+        margin-bottom: 1.1rem;
+    }
+    .intoAccount {
+        font-size: 1.1rem;
+    }
+    .checkout {
+        width: 18rem;
+        height: 3.2rem;
+    }
+    .button {
+        font-size: 1.1rem;
+    }
+    .under {
+        margin-top: 4vh;
+    }
+}
