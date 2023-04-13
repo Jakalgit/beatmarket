@@ -283,7 +283,7 @@
         font-size: 1.6rem;
     }
 }
-@media (max-height: 1199px) {
+@media (max-width: 1199px) {
     .preview {
         width: 14rem;
         height: 14rem;
@@ -312,6 +312,307 @@
         font-size: 1.1rem;
     }
     .under {
+        margin-top: 10vh;
+    }
+    .typePayText {
+        font-size: 1.8rem;
+    }
+    .payBlock {
+        margin-top: 1.1rem;
+    }
+    .payImage {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.7rem;
+    }
+    .payName {
+        font-size: 1.5rem;
+    }
+    .currentPay {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 0.35rem;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+    .note {
+        font-size: 0.7rem;
+    }
+    .right {
+        width: 18rem;
+    }
+    .activate {
+        height: 3.2rem;
+    }
+    .input {
+        height: 3.2rem;
+        font-size: 1.1rem;
+    }
+    .infoSmall {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    .infoLarge {
+        margin-bottom: 4vh;
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 991px) {
+    .preview {
+        width: 11rem;
+        height: 11rem;
+        border-radius: 0.5rem;
+        margin-right: 2rem;
+    }
+    .name {
+        font-size: 1.7rem;
+    }
+    .bpm {
+        font-size: 1.2rem;
+    }
+    .type {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+        margin-top: 0.6rem;
+    }
+    .intoAccount {
+        font-size: 0.9rem;
+    }
+    .checkout {
+        width: 16rem;
+        height: 2.8rem;
+    }
+    .button {
+        font-size: 1rem;
+        border-radius: 0.4rem;
+    }
+    .under {
         margin-top: 4vh;
+    }
+    .typePay {
+        width: 38%;
+    }
+    .typePayText {
+        font-size: 1.6rem;
+    }
+    .payBlock {
+        margin-top: 0.9rem;
+    }
+    .payImage {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .payName {
+        font-size: 1.3rem;
+    }
+    .currentPay {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .text {
+        font-size: 0.7rem;
+    }
+    .dot {
+        margin-top: 0.15rem;
+    }
+    .conditionsBlock {
+        height: 70%;
+    }
+    .conditions {
+        max-height: 70%;
+    }
+    .right {
+        width: 16rem;
+        height: 70%;
+    }
+    .activate {
+        height: 2.8rem;
+    }
+    .input {
+        height: 2.8rem;
+        font-size: 1rem;
+    }
+    .fio {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .infoSmall {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    .infoLarge {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 767px) {
+    .preview {
+        width: 9rem;
+        height: 9rem;
+        margin-right: 1.5rem;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .bpm {
+        font-size: 1rem;
+        margin-top: -0.2rem;
+    }
+    .type {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+    }
+    .intoAccount {
+        font-size: 0.8rem;
+        margin-bottom: -0.2rem;
+    }
+    .checkout {
+        width: 13rem;
+        height: 2.4rem;
+    }
+    .button {
+        font-size: 0.85rem;
+    }
+    .typePay {
+        width: 32%;
+    }
+    .typePayText {
+        font-size: 1.4rem;
+    }
+    .payImage {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .payName {
+        font-size: 1rem;
+    }
+    .currentPay {
+        width: 1rem;
+        height: 1rem;
+        border-width: 0.1rem;
+    }
+    .conditionsBlock {
+        width: 30%;
+        height: 60%;
+    }
+    .conditions {
+        max-height: 65%;
+        padding-left: 0.5rem;
+    }
+    .right {
+        height: 60%;
+        width: 13rem;
+        margin-left: 2rem;
+    }
+    .small_line {
+        flex-direction: column;
+    }
+    .activate {
+        width: 100%;
+        margin-top: 0.8rem;
+        height: 2.4rem;
+        margin-left: 0;
+    }
+    .code {
+        width: 100%;
+    }
+    .infoSmall {
+        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+    .infoLarge {
+        font-size: 1.1rem;
+        margin-bottom: 8vh;
+    }
+}
+@media (max-width: 575px) {
+    .line {
+        flex-direction: column;
+    }
+    .preview {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 1rem;
+    }
+    .nameBlock {
+        text-align: center;
+    }
+    .name {
+        font-size: 1.6rem;
+    }
+    .type {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .checkout {
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 20rem;
+        height: 3.4rem;
+    }
+    .button {
+        font-size: 1.1rem;
+        border-radius: 0.7rem;
+    }
+    .typePay {
+        width: 60%;
+    }
+    .conditionsBlock {
+        width: 65%;
+        height: 40%;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    .conditions {
+        max-height: 70%;
+        padding-right: 0.8rem;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+    .dot {
+        margin-top: 0.3rem;
+    }
+    .note {
+        font-size: 0.8rem;
+    }
+    .right {
+        height: auto;
+        width: 70%;
+        margin-top: 2rem;
+    }
+    .small_line {
+        flex-direction: row;
+    }
+    .activate {
+        width: 48%;
+        margin-left: 4%;
+        height: 3.4rem;
+        margin-top: 0;
+    }
+    .code {
+        width: 48%;
+    }
+    .input {
+        height: 3.4rem;
+        font-size: 1.1rem;
+        border-radius: 0.7rem;
+    }
+    .fio {
+        margin-top: 1rem;
+    }
+    .infoSmall {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    .infoLarge {
+        font-size: 1.3rem;
+        margin-bottom: 4vh;
     }
 }

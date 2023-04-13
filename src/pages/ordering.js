@@ -1,4 +1,5 @@
 import style from "@/styles/pages/ordering.module.css"
+import style_fb from "@/styles/pages/support.module.css"
 import Image from "next/image";
 import Grid from "@/components/Grid";
 import {motion} from "framer-motion";
@@ -32,7 +33,7 @@ const Ordering = () => {
     ]
 
     return (
-        <div className="height" style={{display: 'flex', flexDirection: 'column'}}>
+        <div className={'height ' + style_fb.pd} style={{display: 'flex', flexDirection: 'column'}}>
             <Grid>
                 <div className={style.line}>
                     <Image alt="preview" src={require("@/img/preview.png")} className={style.preview} />
@@ -92,7 +93,7 @@ const Ordering = () => {
                         </p>
                     </div>
                     <div className={style.right}>
-                        <div className={style.line}>
+                        <div className={style.line + ' ' + style.small_line}>
                             <input type="text" className={style.input + ' ' + style.code} placeholder="Промокод"/>
                             <div className={style.buttonWrapper + ' ' + style.activate}>
                                 <motion.button
