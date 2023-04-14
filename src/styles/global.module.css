@@ -1,0 +1,44 @@
+.underline {
+    text-decoration: underline;
+    display: inline-block;
+}
+.bold {
+    font-weight: bold;
+    display: inline-block;
+}
+.ptr:hover {
+    cursor: pointer;
+}
+.head {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 4vh;
+}
+@media (max-width: 1199px) {
+    .head {
+        font-size: 2.3rem;
+        margin-top: 3vh;
+    }
+}
+@media (max-width: 991px) {
+    .head {
+        font-size: 2rem;
+        margin-top: 5vh;
+    }
+}
+@media (max-width: 767px) {
+    .head {
+        margin-top: 0;
+        font-size: 1.7rem;
+    }
+}
+@media (max-width: 575px) {
+    .pd {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+}

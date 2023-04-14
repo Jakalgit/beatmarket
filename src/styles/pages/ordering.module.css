@@ -195,11 +195,11 @@
 }
 .infoSmall {
     font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 .infoLarge {
     font-size: 1.8rem;
-    margin-bottom: 8vh;
+    margin-bottom: 3vh;
 }
 .href {
     display: inline-block;

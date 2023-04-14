@@ -23,10 +23,6 @@
     margin-top: 20vh;
     text-decoration: underline;
 }
-.under_line {
-    text-decoration: underline;
-    display: inline-block;
-}
 .flex {
     display: flex;
     flex: 1 0 auto;
