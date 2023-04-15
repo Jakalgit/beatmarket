@@ -28,9 +28,6 @@
     flex: 1 0 auto;
     flex-direction: column;
 }
-.imt {
-    font-size: 2.2rem;
-}
 .btn_mt {
     margin-top: auto;
     margin-bottom: 15vh;
@@ -46,14 +43,8 @@
     .policy {
         margin-top: 15vh;
     }
-    .imt {
-        font-size: 2rem;
-    }
 }
 @media (max-width: 991px) {
-    .imt {
-        font-size: 1.6rem;
-    }
     .btn_mt {
         margin-bottom: 10vh;
     }

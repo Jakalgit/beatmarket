@@ -7,6 +7,7 @@ import {useState} from "react";
 import Beat from "@/components/Beat";
 import Pagination from "@/components/Pagination";
 import Reviews from "@/components/Popups/Reviews";
+import Button from "@/components/Button";
 
 export default function CreatorPage() {
 
@@ -68,17 +69,13 @@ export default function CreatorPage() {
                                 </svg>
                                 <p className={style.send_text}>Написать продавцу</p>
                             </div>
-                            <div className={style.sub}>
-                                <div className={style.spinner} style={{display: (subLoading ? "block" : "none")}}/>
-                                <motion.button
-                                    onClick={subscribe}
-                                    whileTap={{ scale: 0.95 }}
-                                    className={style.sub_button + ' ' + style.subscribe}
-                                    style={{display: (!subLoading ? "block" : "none")}}
-                                >
-                                    Подписаться
-                                </motion.button>
-                            </div>
+                            <Button
+                                onClick={subscribe}
+                                text="Подписаться"
+                                loading={subLoading}
+                                classes={style.sub}
+                                color="#304FFE"
+                            />
                         </div>
                     </div>
                 </motion.div>

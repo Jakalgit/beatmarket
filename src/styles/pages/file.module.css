@@ -1,0 +1,160 @@
+.file {
+    width: 100%;
+    min-height: 13vh;
+    height: 16vh;
+    border: 0.1rem solid #304FFE;
+    box-shadow: 0 0 1.5rem 1rem rgba(48, 79, 254, 0.25);
+    border-radius: 1.8rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    margin-top: 5vh;
+}
+.file:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2rem 1.5rem rgba(48, 79, 254, 0.25);
+}
+.download {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: #82B1FF;
+}
+.svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #82B1FF;
+    margin-left: 0.6rem;
+}
+.underText {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 3vh;
+    text-align: center;
+}
+.href {
+    color: #82B1FF;
+    transition: all 0.2s;
+}
+.href:hover {
+    cursor: pointer;
+    color: white;
+}
+.authorBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+.preview {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #82B1FF;
+    margin-top: 5vh;
+}
+.button {
+    width: 24rem;
+    height: 4rem;
+    margin-top: 3.5vh;
+    margin-bottom: 5vh;
+}
+@media (max-width: 1199px) {
+    .file {
+        margin-top: 3vh;
+    }
+    .download {
+        font-size: 1.2rem;
+    }
+    .underText {
+        font-size: 1.2rem;
+    }
+    .svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .preview {
+        width: 9rem;
+        height: 9rem;
+    }
+    .button {
+        width: 20rem;
+        height: 3.6rem;
+    }
+}
+@media (max-width: 991px) {
+    .file {
+        border-radius: 1.5rem;
+    }
+    .download {
+        font-size: 1.1rem;
+    }
+    .underText {
+        font-size: 1.1rem;
+    }
+    .svg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    .preview {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    .button {
+        width: 16rem;
+        height: 3rem;
+    }
+}
+@media (max-width: 767px) {
+    .file {
+        border-radius: 1.2rem;
+        margin-top: 2vh;
+    }
+    .download {
+        font-size: 1rem;
+    }
+    .underText {
+        font-size: 1rem;
+    }
+    .svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.4rem;
+    }
+    .preview {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    .button {
+        width: 14rem;
+        height: 2.6rem;
+    }
+}
+@media (max-width: 575px) {
+    .file {
+        border-radius: 1.5rem;
+        margin-top: 3vh;
+        min-height: 6vh;
+        height: 10vh;
+    }
+    .download {
+        font-size: 1.1rem;
+    }
+    .svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 0.6rem;
+    }
+    .preview {
+        width: 9.5rem;
+        height: 9.5rem;
+    }
+    .button {
+        width: 18rem;
+        height: 3.2rem;
+        margin-top: 4vh;
+    }
+}

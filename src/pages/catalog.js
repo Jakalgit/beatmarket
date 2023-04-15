@@ -28,28 +28,26 @@ export default function Catalog() {
                 setVisible={(value) => updateVisible(value)}
                 save={filters} setSaveFilters={(value) => updateFilters(value)}
             />
-            <HeightWrapper dir="column" JSX={
-                <>
-                    <div className={style.filter_line}>
-                        <button onClick={() => setVisible(true)} className={style.filter_button}>Фильтры</button>
-                    </div>
-                    <div className={style.list}>
-                        <Grid>
-                            {arr.map(() =>
-                                <>
-                                    <Creator name={"GONE.Fludd"} starCount={"16234782"} />
-                                    <Creator name={"CAKE BUY BEATS"} starCount={"12234782"} />
-                                    <Creator name={"PROOVY"} starCount={"16234782"} />
-                                    <Creator name={"КлоуКома"} starCount={"16234782"} />
-                                </>
-                            )}
-                        </Grid>
-                    </div>
+            <HeightWrapper dir="column">
+                <div className={style.filter_line}>
+                    <button onClick={() => setVisible(true)} className={style.filter_button}>Фильтры</button>
+                </div>
+                <div className={style.list}>
                     <Grid>
-                        <Pagination />
+                        {arr.map(() =>
+                            <>
+                                <Creator name={"GONE.Fludd"} starCount={"16234782"} />
+                                <Creator name={"CAKE BUY BEATS"} starCount={"12234782"} />
+                                <Creator name={"PROOVY"} starCount={"16234782"} />
+                                <Creator name={"КлоуКома"} starCount={"16234782"} />
+                            </>
+                        )}
                     </Grid>
-                </>
-            } />
+                </div>
+                <Grid>
+                    <Pagination />
+                </Grid>
+            </HeightWrapper>
         </>
     );
 };

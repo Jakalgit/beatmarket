@@ -234,10 +234,6 @@
         width: 20rem;
         height: 3.6rem;
     }
-    .button {
-        border-radius: 0.6rem;
-        font-size: 1.3rem;
-    }
     .under {
         margin-top: 8vh;
     }
@@ -307,9 +303,6 @@
     .checkout {
         width: 18rem;
         height: 3.2rem;
-    }
-    .button {
-        font-size: 1.1rem;
     }
     .under {
         margin-top: 10vh;
@@ -386,10 +379,6 @@
     .checkout {
         width: 16rem;
         height: 2.8rem;
-    }
-    .button {
-        font-size: 1rem;
-        border-radius: 0.4rem;
     }
     .under {
         margin-top: 4vh;
@@ -474,9 +463,6 @@
     .checkout {
         width: 13rem;
         height: 2.4rem;
-    }
-    .button {
-        font-size: 0.85rem;
     }
     .typePay {
         width: 32%;

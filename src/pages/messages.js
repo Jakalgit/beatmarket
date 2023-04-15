@@ -133,7 +133,7 @@ export default function Messages() {
                 setVisible={(value) => updateAttention(value)}
                 setDelChat={(value) => updateDeleteChat(value)}
             />
-            <HeightWrapper dir="column" JSX={
+            <HeightWrapper dir="column">
                 <Grid>
                     <Col xxl={4} xl={4} lg={4} md={{span: 4, offset: 0}} sm={{span: 10, offset: 1}} xs={12}
                          style={{display: showList ? "flex" : "none", justifyContent: "center"}}
@@ -241,7 +241,7 @@ export default function Messages() {
                         </motion.div>
                     </Col>
                 </Grid>
-            } />
+            </HeightWrapper>
         </>
     );
 };

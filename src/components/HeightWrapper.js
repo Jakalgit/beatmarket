@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 
-const HeightWrapper = ({dir, JSX}) => {
+const HeightWrapper = ({dir, children}) => {
     return (
         <motion.div
             className="height"
@@ -8,7 +8,7 @@ const HeightWrapper = ({dir, JSX}) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
         >
-            {JSX}
+            {children}
         </motion.div>
     );
 };

@@ -17,8 +17,8 @@ const Questions = () => {
     }
 
     return (
-        <HeightWrapper dir="column" JSX={
-            <Grid>
+        <Grid>
+            <HeightWrapper dir="column">
                 {currentQuest === -1 &&
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -42,8 +42,8 @@ const Questions = () => {
                 {currentQuest === 3 &&
                     <Question_3 setCurrentQuest={(value) => updateCurrentQuest(value)} />
                 }
-            </Grid>
-        } />
+            </HeightWrapper>
+        </Grid>
     );
 };
 
