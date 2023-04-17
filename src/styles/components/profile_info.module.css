@@ -1,5 +1,6 @@
 .line {
     display: flex;
+    align-items: center;
 }
 .wrapperPreview {
     position: relative;
@@ -49,4 +50,150 @@
     width: 2.5rem;
     height: 2.5rem;
     fill: white;
+}
+.nameBlock {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.name {
+    display: flex;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
+}
+.changeNameSvg {
+    margin-left: 1.7rem;
+    fill: #82B1FF;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: all 0.2s;
+}
+.changeNameSvg:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.userId {
+    display: flex;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: #82B1FF;
+    margin-top: 1rem;
+}
+.smallSvg {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.changeSvg {
+    fill: #82B1FF;
+    margin-left: 1.7rem;
+    transition: all 0.2s;
+}
+.error {
+    margin-left: auto;
+    fill: #F44336;
+    margin-top: 0.2rem;
+}
+.changeSvg:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.logoutBlock {
+    display: inline-flex;
+    margin-top: auto;
+    align-items: center;
+}
+.logout {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: #F44336;
+    margin-right: 1rem;
+    transition: all 0.4s;
+}
+.logout:hover {
+    cursor: pointer;
+}
+.logoutSvg {
+    width: 2rem;
+    height: 2rem;
+    fill: #F44336;
+}
+.changePassword {
+    margin-left: auto;
+    margin-top: auto;
+    width: 19rem;
+    height: 4rem;
+}
+.verticalLine {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+.infoBlock {
+    width: 18%;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+.infoName {
+    display: flex;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.info {
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 1.3rem;
+}
+.infoError {
+    color: #F44336;
+}
+.attention {
+    width: 30%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    color: #F44336;
+    margin-top: 5vh;
+}
+@media (max-width: 1399px) {
+    .wrapperPreview {
+        width: 12rem;
+        height: 12rem;
+        margin-right: 3rem;
+    }
+    .changePreview {
+        width: 4rem;
+        height: 4rem;
+    }
+    .changePreviewSvg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .changeNameSvg {
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-left: 1.4rem;
+    }
+    .userId {
+        margin-top: 0.5rem;
+        font-size: 1.6rem;
+    }
+    .smallSvg {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    .changeSvg {
+        margin-left: 1.4rem;
+    }
 }
