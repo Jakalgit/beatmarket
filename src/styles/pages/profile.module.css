@@ -1,0 +1,32 @@
+.layouts {
+    flex: 1 0 auto;
+}
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+.layoutsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+.layoutButton {
+    width: 18rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #304FFE;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    background-color: black;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    transition: background-color 0.4s;
+}
+.layoutButton:hover {
+    cursor: pointer;
+}
+.selectButton {
+    background-color: #304FFE;
+}
