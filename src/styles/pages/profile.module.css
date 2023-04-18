@@ -3,14 +3,15 @@
 }
 .layout {
     display: flex;
+    height: 100%;
     flex-direction: column;
 }
 .layoutsButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3vh;
     margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 .layoutButton {
     width: 18rem;
@@ -30,4 +31,18 @@
 }
 .selectButton {
     background-color: #304FFE;
+}
+@media (max-width: 1199px) {
+    .layoutButton {
+        width: 16rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 991px) {
+    .layoutButton {
+        width: 14rem;
+        height: 3rem;
+        font-size: 1.1rem;
+    }
 }

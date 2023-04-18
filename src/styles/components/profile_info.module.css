@@ -129,12 +129,16 @@
 }
 .verticalLine {
     display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+}
+.block {
+    display: flex;
     flex-direction: column;
-    margin-top: 2vh;
+    width: 50%;
 }
 .infoBlock {
-    width: 18%;
-    margin-top: 8vh;
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
@@ -157,11 +161,11 @@
     color: #F44336;
 }
 .attention {
-    width: 30%;
+    width: 80%;
     font-family: 'Manrope', sans-serif;
     font-size: 1.3rem;
     color: #F44336;
-    margin-top: 5vh;
+    margin-top: 4vh;
 }
 @media (max-width: 1399px) {
     .wrapperPreview {
@@ -196,4 +200,224 @@
     .changeSvg {
         margin-left: 1.4rem;
     }
+    .error {
+        margin-top: 0.1rem;
+    }
+    .logout {
+        font-size: 1.6rem;
+    }
+    .logoutSvg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    .changePassword {
+        width: 17rem;
+        height: 3.6rem;
+    }
+    .infoName {
+        font-size: 1.8rem;
+    }
+    .info {
+        font-size: 1.6rem;
+    }
+    .attention {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 1199px) {
+    .wrapperPreview {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 2rem;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .changeNameSvg {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1.1rem;
+    }
+    .userId {
+        margin-top: 0.3rem;
+        font-size: 1.4rem;
+    }
+    .smallSvg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .changeSvg {
+        margin-left: 1.1rem;
+    }
+    .logout {
+        font-size: 1.4rem;
+        margin-right: 0.8rem;
+    }
+    .logoutSvg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .changePassword {
+        width: 15rem;
+        height: 3.2rem;
+    }
+    .infoName {
+        font-size: 1.6rem;
+    }
+    .info {
+        font-size: 1.4rem;
+    }
+    .attention {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 991px) {
+    .wrapperPreview {
+        width: 9rem;
+        height: 9rem;
+        margin-right: 1.5rem;
+    }
+    .name {
+        font-size: 1.7rem;
+    }
+    .changeNameSvg {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 1rem;
+    }
+    .userId {
+        font-size: 1.3rem;
+    }
+    .smallSvg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .changeSvg {
+        margin-left: 1rem;
+    }
+    .logout {
+        font-size: 1.3rem;
+        margin-right: 0.7rem;
+    }
+    .logoutSvg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .changePassword {
+        width: 14rem;
+        height: 3rem;
+    }
+    .infoBlock {
+        width: 55%;
+    }
+    .infoName {
+        font-size: 1.5rem;
+    }
+    .info {
+        font-size: 1.3rem;
+    }
+    .attention {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .wrapperPreview {
+        width: 8rem;
+        height: 8rem;
+    }
+    .name {
+        font-size: 1.6rem;
+    }
+    .changeNameSvg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .userId {
+        font-size: 1.2rem;
+    }
+    .smallSvg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .logout {
+        font-size: 1.2rem;
+    }
+    .logoutSvg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .changePassword {
+        width: 12rem;
+        height: 2.6rem;
+    }
+    .infoBlock {
+        width: 70%;
+    }
+    .infoName {
+        font-size: 1.4rem;
+    }
+    .info {
+        font-size: 1.2rem;
+    }
+    .attention {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 575px) {
+    .verticalLine {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .line {
+        flex-direction: column;
+    }
+    .wrapperPreview {
+        margin-right: 0;
+        width: 11rem;
+        height: 11rem;
+    }
+    .logoutBlock {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    .nameBlock {
+        height: auto;
+        margin-top: 1rem;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .changeNameSvg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .changePassword {
+        margin-left: 0;
+        margin-top: 1.5rem;
+        width: 13rem;
+        height: 3rem;
+    }
+    .userId {
+        font-size: 1.4rem;
+        justify-content: center;
+    }
+    .smallSvg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .logout {
+        font-size: 1.4rem;
+    }
+    .logoutSvg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .infoBlock {
+        width: 100%;
+    }
+    .block {
+        width: 65%;
+    }
+
 }

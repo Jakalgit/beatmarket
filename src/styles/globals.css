@@ -46,7 +46,7 @@ input[type=range]:focus {
 }
 @media (max-width: 767px) {
   .height {
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 8rem);
   }
 }
 @media (max-width: 575px) {

@@ -34,27 +34,27 @@ const Profile = () => {
     }
 
     return (
-        <HeightWrapper dir="column">
-            <div className={style.layouts}>
-                <Grid>
+        <Grid>
+            <HeightWrapper dir="column">
+                <div className={style.layouts}>
                     {router.query.tab === tabs[0].href &&
                         <ProfileInfo />
                     }
-                </Grid>
-            </div>
-            <div className={style.layoutsButton}>
-                {tabs.map(tab =>
-                    <motion.button
-                        onClick={() => setLayout(tab.href)}
-                        className={style.layoutButton + ' '
-                            + (router.query.tab === tab.href ? style.selectButton : '')}
-                        whileTap={{scale: 0.95}}
-                    >
-                        {tab.text}
-                    </motion.button>
-                )}
-            </div>
-        </HeightWrapper>
+                </div>
+                <div className={style.layoutsButton}>
+                    {tabs.map(tab =>
+                        <motion.button
+                            onClick={() => setLayout(tab.href)}
+                            className={style.layoutButton + ' '
+                                + (router.query.tab === tab.href ? style.selectButton : '')}
+                            whileTap={{scale: 0.95}}
+                        >
+                            {tab.text}
+                        </motion.button>
+                    )}
+                </div>
+            </HeightWrapper>
+        </Grid>
     );
 };
 
