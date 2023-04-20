@@ -1,0 +1,151 @@
+.order {
+    padding: 1rem 1.5rem 0;
+    flex-direction: column;
+}
+.line {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.up {
+    margin-bottom: 1.4rem;
+}
+.time {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-left: auto;
+}
+.preview {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+    margin-right: 1.2rem;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+}
+.bpm {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.license {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    color: #82B1FF;
+    margin-top: auto;
+}
+@media (max-width: 1399px) {
+    .up {
+        margin-bottom: 1rem;
+    }
+    .preview {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+}
+@media (max-width: 1199px) {
+    .order {
+        padding: 1rem 1.2rem 0;
+    }
+    .up {
+        margin-bottom: 0.6rem;
+    }
+    .preview {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.4rem;
+    }
+    .name {
+        font-size: 1.3rem;
+    }
+    .bpm {
+        font-size: 1rem;
+        margin-top: -0.3rem;
+    }
+    .time {
+        font-size: 1.7rem;
+    }
+    .license {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 991px) {
+    .order {
+        padding: 0.7rem 1rem 0;
+    }
+    .up {
+        margin-bottom: 0.4rem;
+    }
+    .preview {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.3rem;
+    }
+    .name {
+        font-size: 1.1rem;
+    }
+    .bpm {
+        font-size: 0.9rem;
+    }
+    .time {
+        font-size: 1.5rem;
+    }
+    .license {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 767px) {
+    .order {
+        padding-top: 0.55rem;
+    }
+    .up {
+        margin-bottom: 0.2rem;
+    }
+    .preview {
+        width: 4.4rem;
+        height: 4.4rem;
+        margin-right: 1rem;
+    }
+    .name {
+        font-size: 1rem;
+    }
+    .bpm {
+        font-size: 0.85rem;
+        margin-top: -0.1rem;
+    }
+    .time {
+        font-size: 1.3rem;
+    }
+    .license {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 575px) {
+    .order {
+        padding-top: 0.7rem;
+    }
+    .up {
+        margin-bottom: 0.5rem;
+    }
+    .preview {
+        width: 4rem;
+        height: 4rem;
+    }
+    .name {
+        font-size: 0.9rem;
+    }
+    .bpm {
+        font-size: 0.8rem;
+    }
+    .time {
+        font-size: 1rem;
+    }
+    .license {
+        font-size: 0.8rem;
+    }
+}

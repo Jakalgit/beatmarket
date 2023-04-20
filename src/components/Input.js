@@ -1,7 +1,7 @@
 import style from "@/styles/components/input.module.css"
 import {useEffect, useState} from "react";
 
-const Input = ({placeholder = '', styles = '', value = '', setValue, type = 'text'}) => {
+const Input = ({placeholder = '', styles = '', wrapperStyles = '', value = '', setValue, type = 'text'}) => {
 
     const [text, setText] = useState(value)
     const [currentType, setCurrentType] = useState(type)
@@ -26,7 +26,7 @@ const Input = ({placeholder = '', styles = '', value = '', setValue, type = 'tex
     }
 
     return (
-        <div className={style.wrapper}>
+        <div className={wrapperStyles + ' ' + style.wrapper}>
             <input
                 type={currentType}
                 className={style.input + ' ' + styles}

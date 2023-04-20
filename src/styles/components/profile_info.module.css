@@ -366,6 +366,7 @@
 }
 @media (max-width: 575px) {
     .verticalLine {
+        margin-top: 1vh;
         flex-direction: column;
         justify-content: center;
     }
@@ -374,8 +375,8 @@
     }
     .wrapperPreview {
         margin-right: 0;
-        width: 11rem;
-        height: 11rem;
+        width: 10rem;
+        height: 10rem;
     }
     .logoutBlock {
         margin-top: 1rem;
@@ -417,7 +418,14 @@
         width: 100%;
     }
     .block {
-        width: 65%;
+        width: 70%;
     }
-
+    .attention {
+        margin-top: 2vh;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+    .mt {
+        margin-top: 5vh;
+    }
 }

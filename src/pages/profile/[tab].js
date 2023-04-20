@@ -5,8 +5,22 @@ import {motion} from "framer-motion";
 import {PROFILE} from "@/utils/routes";
 import ProfileInfo from "@/components/ProfileLayouts/ProfileInfo";
 import Grid from "@/components/Grid";
+import ProfilePurchases from "@/components/ProfileLayouts/ProfilePurchases";
+import {useEffect, useRef, useState} from "react";
+import ProfileConfirmations from "@/components/ProfileLayouts/ProfileConfirmations";
 
 const Profile = () => {
+
+    const [layoutHeight, setLayoutHeight] = useState(0)
+
+    const heightRef = useRef(null)
+    const buttonsRef = useRef(null)
+
+    useEffect(() => {
+        setLayoutHeight(
+            heightRef.current.getBoundingClientRect().height - buttonsRef.current.getBoundingClientRect().height
+        )
+    }, [heightRef, buttonsRef])
 
     const router = useRouter()
 
@@ -20,7 +34,7 @@ const Profile = () => {
             text: "Покупки"
         },
         {
-            href: "confirmation",
+            href: "confirmations",
             text: "Подтверждения"
         },
         {
@@ -34,27 +48,40 @@ const Profile = () => {
     }
 
     return (
-        <Grid>
-            <HeightWrapper dir="column">
-                <div className={style.layouts}>
-                    {router.query.tab === tabs[0].href &&
-                        <ProfileInfo />
-                    }
-                </div>
-                <div className={style.layoutsButton}>
-                    {tabs.map(tab =>
-                        <motion.button
-                            onClick={() => setLayout(tab.href)}
-                            className={style.layoutButton + ' '
-                                + (router.query.tab === tab.href ? style.selectButton : '')}
-                            whileTap={{scale: 0.95}}
-                        >
-                            {tab.text}
-                        </motion.button>
-                    )}
-                </div>
-            </HeightWrapper>
-        </Grid>
+        <div ref={heightRef}>
+            <Grid>
+                <HeightWrapper
+                    dir="column"
+                >
+                    <div className={style.layouts}>
+                        {router.query.tab === tabs[0].href &&
+                            <ProfileInfo />
+                        }
+                        {router.query.tab === tabs[1].href &&
+                            <ProfilePurchases layoutHeight={layoutHeight} />
+                        }
+                        {router.query.tab === tabs[2].href &&
+                            <ProfileConfirmations layoutHeight={layoutHeight} />
+                        }
+                    </div>
+                    <div
+                        ref={buttonsRef}
+                        className={style.layoutsButton}
+                    >
+                        {tabs.map(tab =>
+                            <motion.button
+                                onClick={() => setLayout(tab.href)}
+                                className={style.layoutButton + ' '
+                                    + (router.query.tab === tab.href ? style.selectButton : '')}
+                                whileTap={{scale: 0.95}}
+                            >
+                                {tab.text}
+                            </motion.button>
+                        )}
+                    </div>
+                </HeightWrapper>
+            </Grid>
+        </div>
     );
 };
 

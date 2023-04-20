@@ -10,8 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 .layoutButton {
     width: 18rem;
@@ -44,5 +44,14 @@
         width: 14rem;
         height: 3rem;
         font-size: 1.1rem;
+    }
+}
+@media (max-width: 575px) {
+    .layoutButton {
+        width: 12rem;
+        height: 2.5rem;
+        font-size: 0.95rem;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
     }
 }
