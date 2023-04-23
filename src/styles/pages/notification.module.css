@@ -1,0 +1,50 @@
+.block {
+    flex: 1 0 auto;
+}
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 7vh;
+}
+.line {
+    display: flex;
+    align-items: center;
+}
+.date {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+}
+.time {
+    margin-left: 4rem;
+}
+.button {
+    margin-left: auto;
+    margin-top: 0;
+}
+@media (max-width: 1199px) {
+    .text {
+        font-size: 1.6rem;
+        margin-top: 6vh;
+    }
+    .date {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 991px) {
+    .text {
+        font-size: 1.4rem;
+    }
+    .date {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 575px) {
+    .text {
+        font-size: 1.2rem;
+    }
+    .time {
+        margin-left: 3rem;
+    }
+}

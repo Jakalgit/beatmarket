@@ -1,0 +1,230 @@
+.head {
+    margin-bottom: 3vh;
+}
+.line {
+    display: flex;
+}
+.preview {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 1rem;
+    margin-right: 3.8rem;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
+}
+.bpm {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.6rem;
+}
+.license {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    color: #82B1FF;
+    margin-top: auto;
+}
+.price {
+    margin-left: auto;
+}
+.right {
+    margin-left: auto;
+}
+.date {
+    font-weight: normal;
+    margin-top: auto;
+}
+.list {
+    width: 35rem;
+    margin-top: 0;
+    height: 22vh;
+}
+.conditionText {
+    font-size: 1rem;
+}
+.mt_line {
+    margin-top: 6vh;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: auto;
+}
+.button {
+    width: 24rem;
+    height: 4rem;
+}
+.href {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: #82B1FF;
+    margin-top: auto;
+    margin-left: auto;
+    transition: all 0.2s;
+}
+.href:hover {
+    color: white;
+    cursor: pointer;
+}
+.underText {
+    margin-bottom: 6vh;
+}
+@media (max-width: 1399px) {
+    .preview {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 0.8rem;
+        margin-right: 3.2rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .bpm {
+        font-size: 1.2rem;
+    }
+    .license {
+        font-size: 1.1rem;
+    }
+    .mt_line {
+        margin-top: 4vh;
+    }
+    .button {
+        width: 22rem;
+        height: 3.6rem;
+    }
+    .href {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 1199px) {
+    .preview {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 0.6rem;
+        margin-right: 3rem;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .bpm {
+        margin-top: 0.3rem;
+        font-size: 1.1rem;
+    }
+    .list {
+        width: 28rem;
+    }
+    .conditionText {
+        font-size: 0.9rem;
+    }
+    .mt_line {
+        margin-bottom: 1vh;
+    }
+    .button {
+        width: 20rem;
+        height: 3.2rem;
+    }
+    .href {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 991px) {
+    .preview {
+        width: 7rem;
+        height: 7rem;
+        margin-right: 2.2rem;
+    }
+    .name {
+        font-size: 1.6rem;
+    }
+    .bpm {
+        font-size: 1rem;
+    }
+    .license {
+        font-size: 1rem;
+    }
+    .list {
+        width: 24rem;
+        height: 20vh;
+    }
+    .button {
+        width: 18rem;
+        height: 3rem;
+    }
+    .href {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 767px) {
+    .list {
+        width: 19rem;
+    }
+    .conditionText {
+        font-size: 0.8rem;
+    }
+    .mt_line {
+        margin-bottom: 2.5vh;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .button {
+        width: 16rem;
+        height: 2.6rem;
+    }
+}
+@media (max-width: 575px) {
+    .preview {
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-right: 1.5rem;
+        border-radius: 0.4rem;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+    .bpm {
+        margin-top: 0.1rem;
+        font-size: 0.9rem;
+    }
+    .license {
+        font-size: 0.9rem;
+    }
+    .mt_line {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8vh;
+    }
+    .conditionText {
+        font-size: 1rem;
+    }
+    .list {
+        width: 70%;
+        height: 30vh;
+        max-height: 100vh;
+    }
+    .ml_0 {
+        height: auto;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+    }
+    .button {
+        width: 18rem;
+        height: 3rem;
+    }
+    .href {
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+}

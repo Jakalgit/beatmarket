@@ -32,7 +32,7 @@ const ProfileConfirmations = ({layoutHeight}) => {
                 style={{maxHeight: listHeight}}
                 className={style_pr.orderList}
             >
-                {[1, 1, 1, 1, 1, 1, 1].map(() =>
+                {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() =>
                     <motion.div
                         ref={confirmationRef}
                         className={style_pr.order + ' ' + style.order}

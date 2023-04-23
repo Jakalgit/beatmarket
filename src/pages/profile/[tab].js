@@ -8,6 +8,7 @@ import Grid from "@/components/Grid";
 import ProfilePurchases from "@/components/ProfileLayouts/ProfilePurchases";
 import {useEffect, useRef, useState} from "react";
 import ProfileConfirmations from "@/components/ProfileLayouts/ProfileConfirmations";
+import ProfileNotifications from "@/components/ProfileLayouts/ProfileNotifications";
 
 const Profile = () => {
 
@@ -62,6 +63,9 @@ const Profile = () => {
                         }
                         {router.query.tab === tabs[2].href &&
                             <ProfileConfirmations layoutHeight={layoutHeight} />
+                        }
+                        {router.query.tab === tabs[3].href &&
+                            <ProfileNotifications layoutHeight={layoutHeight} />
                         }
                     </div>
                     <div
