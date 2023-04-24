@@ -5,6 +5,7 @@ import {motion} from "framer-motion";
 import Button from "@/components/Button";
 import {useState} from "react";
 import ChangeInfo from "@/components/Popups/ChangeInfo";
+import ChangePassword from "@/components/Popups/ChangePassword";
 
 const ProfileInfo = () => {
 
@@ -13,6 +14,8 @@ const ProfileInfo = () => {
     const [onClick, setOnClick] = useState(() => {})
     const [loadingChange, setLoadingChange] = useState(false)
     const [changeValue, setChangeValue] = useState('')
+
+    const [changePasswordVisible, setChangePasswordVisible] = useState(false)
 
     const openChangeNamePopup = () => {
         setPlaceholder("Введите новое имя")
@@ -24,6 +27,10 @@ const ProfileInfo = () => {
         setChangeInfoVisible(true)
     }
 
+    const openPasswordPopup = () => {
+        setChangePasswordVisible(true)
+    }
+
     const updateInfoVisible = (value) => {
         setChangeInfoVisible(value)
     }
@@ -32,8 +39,16 @@ const ProfileInfo = () => {
         setChangeValue(value)
     }
 
+    const updatePasswordVisible = (value) => {
+        setChangePasswordVisible(value)
+    }
+
     return (
         <>
+            <ChangePassword
+                visible={changePasswordVisible}
+                setVisible={(value) => updatePasswordVisible(value)}
+            />
             <ChangeInfo
                 visible={changeInfoVisible}
                 loading={loadingChange}
@@ -98,6 +113,7 @@ const ProfileInfo = () => {
                         </div>
                     </div>
                     <Button
+                        onClick={openPasswordPopup}
                         text="Изменить пароль"
                         classes={style.changePassword}
                         color="#304FFE"

@@ -2,17 +2,10 @@
     0% {
         background: rgba(0, 0, 0, 0);
         opacity: 0;
-        transform: scale(0);
     }
-
-    60% {
-        background: rgba(0, 0, 0, 0);
-        opacity: 1;
-        transform: scale(1);
-    }
-
     100% {
         background: rgba(0, 0, 0, 0.7);
+        opacity: 1;
     }
 }
 .popup-back-enter-active {
