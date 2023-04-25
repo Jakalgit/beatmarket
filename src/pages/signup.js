@@ -1,6 +1,5 @@
 import style_in from "@/styles/pages/signin.module.css"
 import Input from "@/components/Input";
-import {motion} from "framer-motion";
 import Image from "next/image";
 import {useState} from "react";
 import HeightWrapper from "@/components/HeightWrapper";
