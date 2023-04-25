@@ -8,6 +8,8 @@ const Button = ({onClick = () => {}, classes, btnClasses = "", loading, color, t
             <motion.button
                 onClick={onClick}
                 className={style.button + ' ' + btnClasses}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
                 whileTap={{scale: 0.95}}
                 style={{backgroundColor: color, display: (!loading ? "block" : "none")}}
             >

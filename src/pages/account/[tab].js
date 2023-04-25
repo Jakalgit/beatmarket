@@ -2,7 +2,7 @@ import style from "@/styles/pages/profile.module.css"
 import HeightWrapper from "@/components/HeightWrapper";
 import {useRouter} from "next/router";
 import {motion} from "framer-motion";
-import {PROFILE} from "@/utils/routes";
+import {CONFIRMATIONS, INFO, NOTIFICATIONS, PROFILE, PURCHASES} from "@/utils/routes";
 import ProfileInfo from "@/components/ProfileLayouts/ProfileInfo";
 import Grid from "@/components/Grid";
 import ProfilePurchases from "@/components/ProfileLayouts/ProfilePurchases";
@@ -27,19 +27,19 @@ const Profile = () => {
 
     const tabs = [
         {
-            href: "info",
+            href: INFO.replace("/", " "),
             text: "Профиль"
         },
         {
-            href: "purchases",
+            href: PURCHASES.replace("/", " "),
             text: "Покупки"
         },
         {
-            href: "confirmations",
+            href: CONFIRMATIONS.replace("/", " "),
             text: "Подтверждения"
         },
         {
-            href: "notifications",
+            href: NOTIFICATIONS.replace("/", " "),
             text: "Уведомления"
         }
     ]

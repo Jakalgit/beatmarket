@@ -1,0 +1,18 @@
+.input {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.6rem;
+    color: #82B1FF;
+    width: 24rem;
+    background-color: black;
+    border: none;
+    border-bottom: 0.1rem solid #304FFE;
+    text-align: center;
+    outline: none;
+    letter-spacing: 0.8rem;
+    margin-bottom: 0.5vh;
+}
+.input::placeholder {
+    color: rgba(130, 177, 255, 0.6);
+    letter-spacing: normal;
+    font-size: 2.1rem;
+}

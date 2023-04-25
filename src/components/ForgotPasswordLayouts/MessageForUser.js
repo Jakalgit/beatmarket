@@ -2,7 +2,7 @@ import style from "@/styles/pages/forgot-password.module.css"
 import global from "@/styles/global.module.css"
 import {motion} from "framer-motion";
 
-const MessageForUser = () => {
+const MessageForUser = ({text}) => {
     return (
         <motion.div
             style={{display: "flex", flexDirection: "column", alignItems: "center"}}
@@ -10,9 +10,7 @@ const MessageForUser = () => {
             animate={{opacity: 1}}
         >
             <p className={style.message + ' ' + global.bold}>
-                Инструкции по восстановалнию пароля отправлены
-                на вашу почту, если письма нет, то, возможно,
-                данного аккаунта не существует.
+                {text}
             </p>
             <a
                 className={style.mail + ' ' + global.underline}

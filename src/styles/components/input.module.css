@@ -9,6 +9,7 @@
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     margin-top: 2rem;
+    transition: all 0.3s;
 }
 .input {
     flex: 1 0 auto;
