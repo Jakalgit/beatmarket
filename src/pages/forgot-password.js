@@ -5,8 +5,9 @@ import Button from "@/components/Button";
 import style from "@/styles/pages/forgot-password.module.css";
 import {useState} from "react";
 import MessageForUser from "@/components/ForgotPasswordLayouts/MessageForUser";
+import {serverSideValidationToken} from "@/logic/functions";
 
-const ForgotPassword = () => {
+const ForgotPassword = ({ validation }) => {
 
     const [email, setEmail] = useState('')
 
@@ -54,5 +55,12 @@ const ForgotPassword = () => {
         </HeightWrapper>
     );
 };
+
+export async function getServerSideProps({ req, res }) {
+
+    const validation = await serverSideValidationToken({req, res})
+
+    return {props: {validation}}
+}
 
 export default ForgotPassword;

@@ -6,7 +6,7 @@ import Input from "@/components/Input";
 import {motion} from "framer-motion";
 import {useEffect, useState} from "react";
 import Button from "@/components/Button";
-import CheckCode from "@/components/ChangePasswordLayouts/CheckCode";
+import CheckPhoneCode from "@/components/CodeLayout/CheckPhoneCode";
 import Success from "@/components/Success";
 
 const ChangePhone = () => {
@@ -41,7 +41,7 @@ const ChangePhone = () => {
                         {success ?
                             <Success text="E-Mail сохранён" />
                             :
-                            <CheckCode
+                            <CheckPhoneCode
                                 setSendDone={(value) => updateSendDone(value)}
                                 setSuccess={(value) => updateSuccess(value)}
                             />

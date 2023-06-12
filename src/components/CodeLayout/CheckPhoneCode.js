@@ -6,7 +6,7 @@ import style_pass from "@/styles/pages/change_password.module.css";
 import Button from "@/components/Button";
 import style_forgot from "@/styles/pages/forgot-password.module.css";
 
-const CheckCode = ({setSendDone, setSuccess}) => {
+const CheckPhoneCode = ({setSendDone, setSuccess}) => {
 
     const [code, setCode] = useState('')
 
@@ -45,4 +45,4 @@ const CheckCode = ({setSendDone, setSuccess}) => {
     );
 };
 
-export default CheckCode;
+export default CheckPhoneCode;
