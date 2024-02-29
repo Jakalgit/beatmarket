@@ -24,7 +24,9 @@ const CheckEmailCode = ({res, setSendDone}) => {
 
     useEffect(() => {
         if (code.length === 6) {
+            
             if (Number(code) === res.code) {
+                /*
                 setLoadingButton(true)
                 registration(res.email, res.password).
                     then(response => {
@@ -36,6 +38,7 @@ const CheckEmailCode = ({res, setSendDone}) => {
                             router.push(SIGN_IN).then()
                         }
                 })
+                 */
             } else {
                 add_notification("Ошибка", "Код не совпадает", 1, addNotification)
             }

@@ -1,6 +1,6 @@
 import style from "@/styles/components/authorization_user.module.css";
 import Link from "next/link";
-import {INFO, PROFILE, SIGN_IN} from "@/utils/routes";
+import {INFO, PROFILE} from "@/utils/routes";
 import HeightWrapper from "@/components/HeightWrapper";
 
 const NonAuthorizationUser = ({ children, validation }) => {

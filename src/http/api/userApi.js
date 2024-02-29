@@ -14,3 +14,8 @@ export const changeUserIdentifier = async (id, identifier, token) => {
     const {data} = await $host.post(`user/change-identifier`, {id, identifier}, {headers: {Authorization: `Bearer ${token}`}})
     return data
 }
+
+export const getUserNotifications = async (id, token) => {
+    const {data} = await $host.get(`user/notifications/${id}`, {headers: {Authorization: `Bearer ${token}`}})
+    return data
+}

@@ -50,6 +50,7 @@ const SignUp = ({ validation }) => {
         }
         if (password === repeatPassword) {
             setLoadingButton(true)
+
             sendCode(email, password).
             then(res => {
                 if (res) {

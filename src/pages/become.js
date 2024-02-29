@@ -5,10 +5,25 @@ import Grid from "@/components/Grid";
 import Image from "next/image";
 import HeightWrapper from "@/components/HeightWrapper";
 import Button from "@/components/Button";
-import {serverSideValidationToken} from "@/logic/functions";
+import {add_notification, getUserInfoByToken, serverSideValidationToken} from "@/logic/functions";
 import AuthorizationUser from "@/components/AuthorizationUser";
+import {getCookie} from "cookies-next";
+import {getOneUser} from "@/http/api/userApi";
+import {useActions} from "@/hooks/useActions";
 
-const Become = ({ validation }) => {
+const Become = ({ validation, email, phone }) => {
+
+    const {addNotification} = useActions()
+
+    const confirmCreator = () => {
+        if (email && phone) {
+
+        } else {
+            add_notification("Ошибка", "Для регистрации аккаунта создателя в вашем профиле должны" +
+                " быть E-Mail и номер телефона", 1, addNotification)
+        }
+    }
+
     return (
         <AuthorizationUser validation={validation}>
             <Grid>
@@ -33,8 +48,16 @@ const Become = ({ validation }) => {
                         регистрационный сбор в размере <p className={global.bold}>389 ₽</p>.
                     </div>
                     <div className={style.dates}>
-                        <p className={style.data}>+7(***)-***-26-96</p>
-                        <p className={style.data + ' ' + style.danger}>E-Mail не указан</p>
+                        {phone ?
+                            <p className={style.data}>{phone}</p>
+                            :
+                            <p className={style.data + ' ' + style.danger}>Номер телефона не указан</p>
+                        }
+                        {email ?
+                            <p className={style.data}>{email}</p>
+                            :
+                            <p className={style.data + ' ' + style.danger}>E-Mail не указан</p>
+                        }
                     </div>
                     <div className={style.line}>
                         <Button
@@ -42,6 +65,7 @@ const Become = ({ validation }) => {
                             classes={style_fb.button_div + ' ' + style.btn_mt}
                             loading={false}
                             color="#304FF3"
+                            onClick={confirmCreator}
                         />
                     </div>
                 </HeightWrapper>
@@ -54,7 +78,16 @@ export async function getServerSideProps({ req, res }) {
 
     const validation = await serverSideValidationToken({req, res})
 
-    return {props: {validation}}
+    let email = null, phone = null
+    if (validation) {
+        const token = getCookie('token',{ req, res })
+        const {id} = getUserInfoByToken(token)
+        const user = await getOneUser(id, token)
+        email = user.email
+        phone = user.phone
+    }
+
+    return {props: {validation, email, phone}}
 }
 
 export default Become;

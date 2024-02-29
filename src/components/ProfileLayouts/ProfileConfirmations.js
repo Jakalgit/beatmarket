@@ -4,16 +4,17 @@ import style_pr from "@/styles/components/profile_purchases.module.css";
 import style from "@/styles/components/profile_confirmations.module.css"
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
+import style_auth from "@/styles/components/authorization_user.module.css";
 
 
-const ProfileConfirmations = ({layoutHeight}) => {
+const ProfileConfirmations = ({ layoutHeight, confirmations }) => {
 
     const [listHeight, setListHeight] = useState(0)
 
     const confirmationRef = useRef(null)
 
     useEffect(() => {
-        if (confirmationRef) {
+        if (confirmationRef && confirmations.length !== 0) {
             const orderHeight = confirmationRef.current.getBoundingClientRect().height;
             let count = Math.trunc(layoutHeight / orderHeight)
             if (count < 1) count = 1
@@ -28,36 +29,43 @@ const ProfileConfirmations = ({layoutHeight}) => {
             initial={{opacity: 0}}
             whileInView={{ opacity: 1 }}
         >
-            <div
-                style={{maxHeight: listHeight}}
-                className={style_pr.orderList}
-            >
-                {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() =>
-                    <motion.div
-                        ref={confirmationRef}
-                        className={style_pr.order + ' ' + style.order}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: false }}
-                    >
-                        <div className={style.line + ' ' + style.up}>
-                            <h1 className={style_pr.name}>Подтверждение №123124</h1>
-                            <p className={style.time}>21 : 34 : 12</p>
-                        </div>
-                        <div className={style.line}>
-                            <Image src={require("@/img/preview.png")} alt="preview" className={style.preview} />
-                            <div className={style_pr.nameBlock}>
-                                <p className={style.name}>
-                                    OVERHEAVEN (Synthwave)
-                                </p>
-                                <p className={style.bpm}>170 bpm</p>
-                                <p className={style.license}>Безлимитная аренда (MP3 + WAV + TrackOut)</p>
+            {confirmations.length === 0 ?
+                <h1
+                    className={style_auth.denied}
+                    style={{textAlign: "center"}}
+                >У вас нет ожидающих подтверждений</h1>
+                :
+                <div
+                    style={{maxHeight: listHeight}}
+                    className={style_pr.orderList}
+                >
+                    {confirmations.map(confirmation =>
+                        <motion.div
+                            ref={confirmationRef}
+                            className={style_pr.order + ' ' + style.order}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false }}
+                        >
+                            <div className={style.line + ' ' + style.up}>
+                                <h1 className={style_pr.name}>Подтверждение №123124</h1>
+                                <p className={style.time}>21 : 34 : 12</p>
                             </div>
-                            <p className={style_pr.name + ' ' + style_pr.price}>30 000 ₽</p>
-                        </div>
-                    </motion.div>
-                )}
-            </div>
+                            <div className={style.line}>
+                                <Image src={require("@/img/preview.png")} alt="preview" className={style.preview} />
+                                <div className={style_pr.nameBlock}>
+                                    <p className={style.name}>
+                                        OVERHEAVEN (Synthwave)
+                                    </p>
+                                    <p className={style.bpm}>170 bpm</p>
+                                    <p className={style.license}>Безлимитная аренда (MP3 + WAV + TrackOut)</p>
+                                </div>
+                                <p className={style_pr.name + ' ' + style_pr.price}>30 000 ₽</p>
+                            </div>
+                        </motion.div>
+                    )}
+                </div>
+            }
         </motion.div>
     );
 };

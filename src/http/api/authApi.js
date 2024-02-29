@@ -25,6 +25,6 @@ export const sendCode = async (email, password) => {
 }
 
 export const isValidationToken = async (token) => {
-    const {data} = await $host.post('auth/check-validation-user-token', {}, {headers: {Authorization: `Bearer ${token}`}})
+    const {data} = await $host.post('auth/check-validation-user-token', {token})
     return data
 }

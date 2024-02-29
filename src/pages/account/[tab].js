@@ -13,9 +13,11 @@ import {serverSideValidationToken} from "@/logic/functions";
 import AuthorizationUser from "@/components/AuthorizationUser";
 import {getCookie} from "cookies-next";
 import jwtDecode from "jwt-decode";
-import {getOneUser} from "@/http/api/userApi";
+import {getOneUser, getUserNotifications} from "@/http/api/userApi";
+import {getUserPurchases} from "@/http/api/purchaseApi";
+import {getUserConfirmations} from "@/http/api/confirmationApi";
 
-function Profile({ validation, userData, token }) {
+function Profile({ validation, userData, token, purchases, confirmations, notifications }) {
 
     const router = useRouter()
 
@@ -73,13 +75,13 @@ function Profile({ validation, userData, token }) {
                                 <ProfileInfo user={user} setUser={(value) => updateUser(value)} token={token}/>
                             }
                             {router.query.tab === tabs[1].href &&
-                                <ProfilePurchases layoutHeight={layoutHeight} />
+                                <ProfilePurchases layoutHeight={layoutHeight} purchases={purchases} />
                             }
                             {router.query.tab === tabs[2].href &&
-                                <ProfileConfirmations layoutHeight={layoutHeight} />
+                                <ProfileConfirmations layoutHeight={layoutHeight} confirmations={confirmations}/>
                             }
                             {router.query.tab === tabs[3].href &&
-                                <ProfileNotifications layoutHeight={layoutHeight} />
+                                <ProfileNotifications layoutHeight={layoutHeight} notifications={notifications} />
                             }
                         </div>
                         <div
@@ -108,16 +110,18 @@ export async function getServerSideProps({ req, res }) {
 
     const validation = await serverSideValidationToken({req, res})
 
-    let userData = null, token = null, purchases = null
+    let userData = null, token = null, purchases = null, confirmations = null, notifications = null
     if (validation) {
         token = getCookie('token',{ req, res }) + ""
         const {id} = jwtDecode(token)
         userData = await getOneUser(id, token)
-
+        purchases = await getUserPurchases(id, token)
+        confirmations = await getUserConfirmations(id, token)
+        notifications = await getUserNotifications(id, token)
     }
 
     return {
-        props: {validation,  userData, token},
+        props: {validation,  userData, token, purchases, confirmations, notifications},
     };
 }
 

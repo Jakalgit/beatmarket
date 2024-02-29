@@ -1,4 +1,4 @@
-import {getCookie} from "cookies-next";
+import {getCookie, deleteCookie} from "cookies-next";
 import {isValidationToken} from "@/http/api/authApi";
 import jwtDecode from "jwt-decode";
 
@@ -26,6 +26,9 @@ export const serverSideValidationToken = async ({req, res}) => {
     if (token) {
         try {
             validation = await isValidationToken(token)
+            if (validation === "Access denied") {
+                deleteCookie('token',{ req, res })
+            }
         } catch (e) {
             validation = "Access denied"
         }
@@ -39,6 +42,7 @@ export const getUserInfoByToken = (token) => {
     try {
         data = jwtDecode(token)
     } catch (e) {
+        console.log(e)
         return null
     }
     return data

@@ -7,8 +7,16 @@ import {useState} from "react";
 import {motion} from "framer-motion";
 import Button from "@/components/Button";
 import MessageForUser from "@/components/ForgotPasswordLayouts/MessageForUser";
+import {add_notification, getUserInfoByToken, serverSideValidationToken} from "@/logic/functions";
+import AuthorizationUser from "@/components/AuthorizationUser";
+import {getCookie} from "cookies-next";
+import {useActions} from "@/hooks/useActions";
+import Cookies from "universal-cookie";
 
-const ChangeEmail = () => {
+function ChangeEmail({ validation }) {
+
+    const {addNotification} = useActions()
+    const cookies = new Cookies();
 
     const [email, setEmail] = useState('')
 
@@ -18,55 +26,76 @@ const ChangeEmail = () => {
         setEmail(value)
     }
 
+    const clickNext = () => {
+        const token = cookies.get('token')
+        if (token) {
+            const user = getUserInfoByToken(token)
+            if (email !== user.email) {
+                setSendDone(true)
+            } else {
+                add_notification("Ошибка", "Старая и новая почта не должны совпадать", 1, addNotification)
+            }
+        }
+    }
+
     return (
-        <HeightWrapper dir="column">
-            <div className={style_in.up}>
-                {sendDone ?
-                    <>
-                        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                            <MessageForUser
-                                text="На вашу почту отправлено письмо, проверьте папку спам,
+        <AuthorizationUser validation={validation}>
+            <HeightWrapper dir="column">
+                <div className={style_in.up}>
+                    {sendDone ?
+                        <>
+                            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                                <MessageForUser
+                                    text="На вашу почту отправлено письмо, проверьте папку спам,
                             если письма нет, то повторите смену почты."
+                                />
+                                <Button
+                                    text="Изменить почту"
+                                    classes={style_in.btn_wrap}
+                                    btnClasses={style_in.button}
+                                    loading={false}
+                                    color="#304FFE"
+                                    onClick={() => {setSendDone(false)}}
+                                />
+                            </div>
+                        </>
+                        :
+                        <motion.div
+                            initial={{opacity: 0}}
+                            whileInView={{opacity: 1}}
+                            className={style_in.center + ' ' + style_forgot.transform}
+                        >
+                            <h1 className={style_in.head}>Новая почта</h1>
+                            <Input
+                                type="email"
+                                placeholder="Укажите новый E-Mail"
+                                value={email}
+                                setValue={(value) => updateEmail(value)}
                             />
+                            <p className={style_pass.text}>
+                                Введите адрес электронной почты, чтобы иметь возможность восстановить доступ к аккаунту и получать уведомления безопасности.
+                            </p>
                             <Button
-                                text="Изменить почту"
+                                text="Сохранить"
                                 classes={style_in.btn_wrap}
                                 btnClasses={style_in.button}
                                 loading={false}
                                 color="#304FFE"
-                                onClick={() => {setSendDone(false)}}
+                                onClick={clickNext}
                             />
-                        </div>
-                    </>
-                    :
-                    <motion.div
-                        initial={{opacity: 0}}
-                        whileInView={{opacity: 1}}
-                        className={style_in.center + ' ' + style_forgot.transform}
-                    >
-                        <h1 className={style_in.head}>Новая почта</h1>
-                        <Input
-                            type="email"
-                            placeholder="Укажите новый E-Mail"
-                            value={email}
-                            setValue={(value) => updateEmail(value)}
-                        />
-                        <p className={style_pass.text}>
-                            Введите адрес электронной почты, чтобы иметь возможность восстановить доступ к аккаунту и получать уведомления безопасности.
-                        </p>
-                        <Button
-                            text="Сохранить"
-                            classes={style_in.btn_wrap}
-                            btnClasses={style_in.button}
-                            loading={false}
-                            color="#304FFE"
-                            onClick={() => {setSendDone(true)}}
-                        />
-                    </motion.div>
-                }
-            </div>
-        </HeightWrapper>
+                        </motion.div>
+                    }
+                </div>
+            </HeightWrapper>
+        </AuthorizationUser>
     );
-};
+}
+
+export async function getServerSideProps({ req, res }) {
+
+    const validation = await serverSideValidationToken({req, res})
+
+    return {props: {validation}}
+}
 
 export default ChangeEmail;

@@ -11,7 +11,7 @@ import {useActions} from "@/hooks/useActions";
 import {add_notification} from "@/logic/functions";
 import Cookies from "universal-cookie";
 import {useRouter} from "next/router";
-import {SIGN_IN} from "@/utils/routes";
+import {CHANGE_EMAIL, CHANGE_PHONE, SIGN_IN} from "@/utils/routes";
 import {deleteCookie} from "cookies-next";
 
 const ProfileInfo = ({user, setUser, token}) => {
@@ -108,6 +108,14 @@ const ProfileInfo = ({user, setUser, token}) => {
         }
     }
 
+    const changePhone = () => {
+       router.push(CHANGE_PHONE).then()
+    }
+
+    const changeEmail = () => {
+        router.push(CHANGE_EMAIL).then()
+    }
+
     const logout = () => {
         deleteCookie('token')
         router.push(SIGN_IN).then()
@@ -200,6 +208,7 @@ const ProfileInfo = ({user, setUser, token}) => {
                             <div className={style.infoName}>
                                 Номер телефона
                                 <svg
+                                    onClick={changePhone}
                                     style={{marginLeft: "auto"}}
                                     className={style.changeSvg + ' ' + style.smallSvg}
                                     viewBox="0 0 100 100"
@@ -233,6 +242,7 @@ const ProfileInfo = ({user, setUser, token}) => {
                             <div className={style.infoName}>
                                 Адрес почты
                                 <svg
+                                    onClick={changeEmail}
                                     style={{marginLeft: "auto"}}
                                     className={style.changeSvg + ' ' + style.smallSvg}
                                     viewBox="0 0 100 100"

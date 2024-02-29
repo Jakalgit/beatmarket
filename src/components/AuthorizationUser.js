@@ -3,7 +3,7 @@ import style from "@/styles/components/authorization_user.module.css"
 import Link from "next/link";
 import {SIGN_IN} from "@/utils/routes";
 
-function AuthorizationUser({ children, validation}) {
+function AuthorizationUser({ children, validation }) {
 
     // Обёртка для страниц, на которые могут заходить только автризованные пользователи
 

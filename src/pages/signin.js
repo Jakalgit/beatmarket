@@ -43,7 +43,11 @@ const SignIn = ({ validation }) => {
                     add_notification("Ошибка", "Неверный ответ сервера", 1, addNotification)
                 }
             } catch (e) {
-                add_notification("Ошибка", "Неверный E-Mail или пароль", 1, addNotification)
+                if (e.code === "ERR_NETWORK") {
+                    add_notification("Ошибка", "Ошибка соединения, попробуйте позже", 1, addNotification)
+                } else {
+                    add_notification("Ошибка", "Неверный E-Mail или пароль", 1, addNotification)
+                }
             }
             setLoadingButton(false)
         }
