@@ -1,4 +1,4 @@
-import {getCookie, deleteCookie} from "cookies-next";
+import {getCookie, deleteCookie, setCookie} from "cookies-next";
 import {isValidationToken} from "@/http/api/authApi";
 import jwtDecode from "jwt-decode";
 
@@ -9,7 +9,7 @@ export const reformatCount = (starCount) => {
         for (let i = starCount.length - 1; i >= 0; i--) {
             price = starCount.charAt(i) + price
             k++
-            if ((i - starCount.length)  % 3 === 0) {
+            if ((i - starCount.length) % 3 === 0) {
                 price = " " + price
             }
         }
@@ -20,21 +20,21 @@ export const reformatCount = (starCount) => {
 }
 
 export const serverSideValidationToken = async ({req, res}) => {
-    const token = getCookie('token',{ req, res })
+    const accessToken = getCookie('act',{ req, res })
+    const refreshToken = getCookie('rft',{ req, res })
 
-    let validation
-    if (token) {
-        try {
-            validation = await isValidationToken(token)
-            if (validation === "Access denied") {
-                deleteCookie('token',{ req, res })
-            }
-        } catch (e) {
-            validation = "Access denied"
+    let data
+    if (accessToken && refreshToken) {
+        data = await isValidationToken(accessToken, refreshToken)
+        if (!data.isValid) {
+            deleteCookie('act',{ req, res })
+            deleteCookie('rft',{ req, res })
+        } else {
+            setCookie('act', data.accessToken, {req, res})
         }
     }
 
-    return validation === "Access is allowed"
+    return data !== undefined && data.isValid
 }
 
 export const getUserInfoByToken = (token) => {

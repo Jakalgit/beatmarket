@@ -14,9 +14,9 @@ export const login = async (email, password) => {
     return data
 }
 
-export const registration = async (email, password) => {
-    const {data} = await $host.post('auth/registration', {email, password})
-    return data
+export const registration = async (email, password, code) => {
+    const res = await $host.post('auth/registration', {email, password, code})
+    return res
 }
 
 export const sendCode = async (email, password) => {
@@ -24,7 +24,7 @@ export const sendCode = async (email, password) => {
     return data
 }
 
-export const isValidationToken = async (token) => {
-    const {data} = await $host.post('auth/check-validation-user-token', {token})
+export const isValidationToken = async (accessToken, refreshToken) => {
+    const {data} = await $host.post('auth/check-validation-user-token', {accessToken, refreshToken})
     return data
 }

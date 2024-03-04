@@ -1,6 +1,5 @@
 import style_in from "@/styles/pages/signin.module.css"
 import Input from "@/components/Input";
-import Image from "next/image";
 import {useState} from "react";
 import HeightWrapper from "@/components/HeightWrapper";
 import Button from "@/components/Button";
@@ -21,7 +20,6 @@ const SignUp = ({ validation }) => {
     const [loadingButton, setLoadingButton] = useState(false)
 
     const [isSendCode, setIsSendCode] = useState(false)
-    const [response, setResponse] = useState(null)
 
     const updateEmail = (value) => {
         setEmail(value)
@@ -55,7 +53,6 @@ const SignUp = ({ validation }) => {
             then(res => {
                 if (res) {
                     setLoadingButton(false)
-                    setResponse(res)
                     setIsSendCode(true)
                 }
             })
@@ -69,7 +66,11 @@ const SignUp = ({ validation }) => {
             <HeightWrapper dir="column">
                 <div className={style_in.up}>
                     {isSendCode ?
-                        <CheckEmailCode setSendDone={(value) => updateSendStatus(value)} res={response} />
+                        <CheckEmailCode
+                            setSendDone={(value) => updateSendStatus(value)}
+                            email={email}
+                            password={password}
+                        />
                         :
                         <motion.div
                             initial={{opacity: 0}}
@@ -107,12 +108,6 @@ const SignUp = ({ validation }) => {
                         </motion.div>
                     }
                 </div>
-                {!isSendCode &&
-                    <div className={style_in.cont_google}>
-                        <Image alt="google" src={require("@/img/google.png")} className={style_in.google}/>
-                        Продолжить с Google
-                    </div>
-                }
             </HeightWrapper>
         </NonAuthorizationUser>
     );

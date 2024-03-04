@@ -18,7 +18,7 @@ const Navbar = ({setMenuLeft}) => {
     const [finderOpacity, setFinderOpacity] = useState(0)
 
     const openProfile = async () => {
-        if (!cookies.get('token')) {
+        if (!cookies.get('act') || !cookies.get('rft')) {
             await router.push(SIGN_IN)
         } else {
             await router.push(PROFILE + INFO)

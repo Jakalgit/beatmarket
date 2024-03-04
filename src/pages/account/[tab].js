@@ -112,12 +112,12 @@ export async function getServerSideProps({ req, res }) {
 
     let userData = null, token = null, purchases = null, confirmations = null, notifications = null
     if (validation) {
-        token = getCookie('token',{ req, res }) + ""
-        const {id} = jwtDecode(token)
-        userData = await getOneUser(id, token)
-        purchases = await getUserPurchases(id, token)
-        confirmations = await getUserConfirmations(id, token)
-        notifications = await getUserNotifications(id, token)
+        token = getCookie('act',{ req, res }) + ""
+        const {user} = jwtDecode(token)
+        userData = await getOneUser(user.id, token)
+        purchases = await getUserPurchases(user.id, token)
+        confirmations = await getUserConfirmations(user.id, token)
+        notifications = await getUserNotifications(user.id, token)
     }
 
     return {

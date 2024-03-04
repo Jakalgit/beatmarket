@@ -117,7 +117,8 @@ const ProfileInfo = ({user, setUser, token}) => {
     }
 
     const logout = () => {
-        deleteCookie('token')
+        deleteCookie('act')
+        deleteCookie('rft')
         router.push(SIGN_IN).then()
     }
 

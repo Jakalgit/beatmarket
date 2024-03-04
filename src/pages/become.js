@@ -80,11 +80,11 @@ export async function getServerSideProps({ req, res }) {
 
     let email = null, phone = null
     if (validation) {
-        const token = getCookie('token',{ req, res })
-        const {id} = getUserInfoByToken(token)
-        const user = await getOneUser(id, token)
-        email = user.email
-        phone = user.phone
+        const token = getCookie('act',{ req, res })
+        const {user} = getUserInfoByToken(token)
+        const u = await getOneUser(user.id, token)
+        email = u.email
+        phone = u.phone
     }
 
     return {props: {validation, email, phone}}

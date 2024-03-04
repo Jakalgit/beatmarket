@@ -12,7 +12,7 @@ import {useActions} from "@/hooks/useActions";
 import {add_notification} from "@/logic/functions";
 import {INFO, PROFILE, SIGN_IN} from "@/utils/routes";
 
-const CheckEmailCode = ({res, setSendDone}) => {
+const CheckEmailCode = ({email, password, setSendDone}) => {
 
     const [code, setCode] = useState('')
     const [loadingButton, setLoadingButton] = useState(false)
@@ -24,24 +24,24 @@ const CheckEmailCode = ({res, setSendDone}) => {
 
     useEffect(() => {
         if (code.length === 6) {
-            
-            if (Number(code) === res.code) {
-                /*
-                setLoadingButton(true)
-                registration(res.email, res.password).
-                    then(response => {
-                        if (response) {
-                            setLoadingButton(false)
-                            cookies.set('token', response.token, {path: '/'})
-                            router.push(PROFILE + INFO).then()
-                        } else {
-                            router.push(SIGN_IN).then()
-                        }
-                })
-                 */
-            } else {
-                add_notification("Ошибка", "Код не совпадает", 1, addNotification)
-            }
+            setLoadingButton(true)
+            registration(email, password, Number(code)).
+            then(response => {
+                if (response) {
+                    setLoadingButton(false)
+                    cookies.set('act', response.data.backendTokens.accessToken, {path: '/', httpOnly: true})
+                    cookies.set('rft', response.data.backendTokens.refreshToken, {path: '/', httpOnly: true})
+
+                    router.push(PROFILE + INFO).then()
+                } else {
+                    router.push(SIGN_IN).then()
+                }
+            })
+            // if (Number(code) === res.code) {
+            //
+            // } else {
+            //     add_notification("Ошибка", "Код не совпадает", 1, addNotification)
+            // }
         }
     }, [code])
 
@@ -63,7 +63,7 @@ const CheckEmailCode = ({res, setSendDone}) => {
                 На ваш E-Mail был отправлен код.
             </p>
             <Button
-                text="Изменить E-Mail"
+                text="Подтвердить E-Mail"
                 classes={style_in.btn_wrap}
                 btnClasses={style_in.button}
                 loading={loadingButton}

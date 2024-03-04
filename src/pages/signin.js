@@ -37,7 +37,8 @@ const SignIn = ({ validation }) => {
             try {
                 const data = await login(email, password)
                 if (data) {
-                    cookies.set('token', data.token, {path: '/'})
+                    cookies.set('act', data.backendTokens.accessToken, {path: '/'})
+                    cookies.set('rft', data.backendTokens.refreshToken, {path: '/'})
                     router.push(PROFILE + INFO).then()
                 } else {
                     add_notification("Ошибка", "Неверный ответ сервера", 1, addNotification)
@@ -82,10 +83,6 @@ const SignIn = ({ validation }) => {
                             onClick={clickSingIn}
                         />
                     </div>
-                </div>
-                <div className={style.cont_google}>
-                    <Image alt="google" src={require("@/img/google.png")} className={style.google}/>
-                    Продолжить с Google
                 </div>
             </HeightWrapper>
         </NonAuthorizationUser>

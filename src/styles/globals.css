@@ -14,8 +14,20 @@ body {
 p {
   margin-bottom: 0;
 }
+textarea, p, button {
+  font-family: 'Manrope', sans-serif;
+}
+svg {
+  transition: all 0.4s;
+}
 h1 {
   margin-bottom: 0;
+}
+div {
+  transition: all 0.2s;
+}
+button {
+  transition: all 0.2s;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #82B1FF;
