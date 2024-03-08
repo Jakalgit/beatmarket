@@ -112,7 +112,7 @@ const FileList = ({ closeFileSelector, inputText = "", setInputText, fileList, i
                 className={style.u_line}
                 ref={inputMessageLineRef}
             >
-                <div style={{display: "flex", alignItems: "center", flex: "1 0 auto"}}>
+                <div style={{display: "flex", flexGrow: 1}}>
                     <textarea
                         ref={textAreaRef}
                         value={inputText}

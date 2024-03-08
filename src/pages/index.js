@@ -26,7 +26,7 @@ export default function Home() {
                    xs={{span: 10, offset: 1}} style={{display: "inline-flex", justifyContent: 'center'}}>
                   <motion.div className={style.top_track} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                               viewport={{ once: false }}>
-                      <Image src={require("@/img/preview.png")} className={style.preview}  alt={}/>
+                      <Image src={require("@/img/preview.png")} className={style.preview}  alt=""/>
                       <div>
                           <h1 className={style.head_text}>Самый популярный бит</h1>
                           <h2 className={style.text}>Больше всего 5-и звёздочных  реакций за последний месяц</h2>

@@ -61,18 +61,13 @@ const ImageList = ({ closeFileSelector, inputText = "", setInputText, fileList, 
         }
     }, [isVisible])
 
-        // useEffect(() => {
-    //     if (fileList.type === "image") {
-    //         fileList.files.forEach(file => {
-    //             console.log(typeof file)
-                        //             const reader = new FileReader();
-    //             reader.onload = () => {
-    //                 setImages([...reader.result]);
-    //             };
-    //             reader.readAsDataURL(file);
-    //         })
-                    //     }
-    // }, [fileList]);
+    useEffect(() => {
+        let _tmp = []
+        fileList.files.forEach(file => {
+            _tmp.push({file: URL.createObjectURL(file), name: file.name})
+        })
+        setImages(_tmp)
+    }, [fileList])
 
     return (
         <motion.div
@@ -81,10 +76,10 @@ const ImageList = ({ closeFileSelector, inputText = "", setInputText, fileList, 
                 opacity: opacity,
                 display: opacity === 0 ? "none" : "flex"
             }}
-            className={style.file_list}
+            className={style.file_list + ' ' + style.img_list}
         >
             <div className={style.head}>
-                <p className={style.file_list_text}>Изображений к отправке: {1} шт.</p>
+                <p className={style.file_list_text}>Изображений к отправке: {fileList.files.length} шт.</p>
                 <svg
                     onClick={closeFileSelector}
                     className={style.close_x}
@@ -97,15 +92,16 @@ const ImageList = ({ closeFileSelector, inputText = "", setInputText, fileList, 
             </div>
             <div className={style.slider_area}>
                 <svg
+                    onClick={goToPrevSlide}
                     className={style.chevron}
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
                 >
                     <path
                         d="m432-480 156 156q11 11 11 28t-11 28q-11 11-28 11t-28-11L348-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 28-11t28 11q11 11 11 28t-11 28L432-480Z"/>
                 </svg>
-                {fileList.files.length !== 0 &&
+                {images.length !== 0 &&
                     <Image
-                        src={URL.createObjectURL(fileList.files[0])}
+                        src={images[currentIndex].file}
                         className={style.image}
                         alt=""
                         width={0}
@@ -114,6 +110,7 @@ const ImageList = ({ closeFileSelector, inputText = "", setInputText, fileList, 
                     />
                 }
                 <svg
+                    onClick={goToNextSlide}
                     className={style.chevron}
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
                 >
@@ -121,6 +118,9 @@ const ImageList = ({ closeFileSelector, inputText = "", setInputText, fileList, 
                         d="M504-480 348-636q-11-11-11-28t11-28q11-11 28-11t28 11l184 184q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L404-268q-11 11-28 11t-28-11q-11-11-11-28t11-28l156-156Z"/>
                 </svg>
             </div>
+            {images.length !== 0 &&
+                <p className={style.img_name}>{images[currentIndex].name}</p>
+            }
             <div
                 className={style.u_line}
                 ref={inputMessageLineRef}

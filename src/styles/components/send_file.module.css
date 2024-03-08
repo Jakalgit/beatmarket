@@ -65,6 +65,9 @@
     align-items: center;
     background-color: #0C1337;
 }
+.img_list {
+    width: 47rem;
+}
 .head {
     display: flex;
     width: 100%;
@@ -104,13 +107,12 @@
     margin-top: 1.5vh;
 }
 .textarea {
-    flex: 1 0 auto;
+    flex-grow: 1;
     font-size: 1.3rem;
     color: #82B1FF;
     outline: none;
     border: none;
     resize: none;
-    overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
     line-height: 2rem;
     transition: height 0.2s ease;
@@ -139,7 +141,8 @@
     color: white;
 }
 .slider_area {
-    height: 16rem;
+    user-select: none;
+    height: 30rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -155,8 +158,14 @@
     cursor: pointer;
 }
 .image {
-    width: 12rem;
-    border-radius: 5%;
+    max-width: 64%;
+    max-height: 90%;
+    object-fit: contain;
     margin-left: 3rem;
     margin-right: 3rem;
+}
+.img_name {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1.2vh;
 }

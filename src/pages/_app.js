@@ -8,7 +8,6 @@ import Notifications from "@/components/Notifications";
 import {wrapper} from "@/store";
 import AppWrapper from "@/components/AppWrapper";
 import Player from "@/components/Player";
-import {init} from "@/http/api/authApi";
 
 function App({ Component, pageProps }) {
 
@@ -17,8 +16,6 @@ function App({ Component, pageProps }) {
     const changeMenuLeft = (value) => {
         setMenuLeft(value)
     }
-
-    init()
 
     return (
         <>

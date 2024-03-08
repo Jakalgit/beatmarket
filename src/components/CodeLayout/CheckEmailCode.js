@@ -28,20 +28,14 @@ const CheckEmailCode = ({email, password, setSendDone}) => {
             registration(email, password, Number(code)).
             then(response => {
                 if (response) {
-                    setLoadingButton(false)
                     cookies.set('act', response.data.backendTokens.accessToken, {path: '/', httpOnly: true})
                     cookies.set('rft', response.data.backendTokens.refreshToken, {path: '/', httpOnly: true})
-
                     router.push(PROFILE + INFO).then()
+                    setLoadingButton(false)
                 } else {
                     router.push(SIGN_IN).then()
                 }
             })
-            // if (Number(code) === res.code) {
-            //
-            // } else {
-            //     add_notification("Ошибка", "Код не совпадает", 1, addNotification)
-            // }
         }
     }, [code])
 

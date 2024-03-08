@@ -37,7 +37,7 @@ const SignUp = ({ validation }) => {
         setIsSendCode(value)
     }
 
-    const clickSendCode = () => {
+    const clickSendCode = async () => {
         if (!(email.length >= 6 && email.includes("@") && email.includes("."))) {
             add_notification("Ошибка", "Невалидный E-Mail", 1, addNotification)
             return
@@ -49,13 +49,17 @@ const SignUp = ({ validation }) => {
         if (password === repeatPassword) {
             setLoadingButton(true)
 
-            sendCode(email, password).
-            then(res => {
-                if (res) {
-                    setLoadingButton(false)
+            try {
+                const data = await sendCode(email, password)
+                if (data) {
                     setIsSendCode(true)
                 }
-            })
+            } catch (e) {
+                if (e.code === "ERR_BAD_REQUEST") {
+
+                }
+            }
+            setLoadingButton(false)
         } else {
             add_notification("Ошибка", "Пароли не совпадают", 1, addNotification)
         }

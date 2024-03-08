@@ -1,3 +1,11 @@
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 html,
 body {
   min-width: 320px;
@@ -14,7 +22,7 @@ body {
 p {
   margin-bottom: 0;
 }
-textarea, p, button {
+textarea, p, button, input, h1 {
   font-family: 'Manrope', sans-serif;
 }
 svg {
@@ -48,6 +56,9 @@ input[type=range]  {
 }
 input[type=range]:focus {
   outline: none;
+}
+.lds-roller {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
 @media (max-width: 1199px) {

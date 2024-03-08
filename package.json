@@ -16,6 +16,7 @@
     "cookies-next": "^2.1.1",
     "dotenv": "^16.0.3",
     "framer-motion": "^9.1.1",
+    "image-size": "^1.1.1",
     "jwt-decode": "^3.1.2",
     "next": "13.1.6",
     "next-redux-wrapper": "^8.1.0",
@@ -23,6 +24,7 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5",
+    "react-spring": "^9.7.3",
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
     "universal-cookie": "^4.0.4"
